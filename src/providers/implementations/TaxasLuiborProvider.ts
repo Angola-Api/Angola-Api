@@ -19,15 +19,23 @@ export class TaxasLuiborProvider implements ITaxasLuiborProvider {
 
   private async extractData() {
     return await this.puppeteer.page.evaluate(() => {
-      const nodeSelectData = document.getElementsByClassName(
-        "BNA-data"
+      const nodeSelectData = document.getElementsByClassName("BNA-data");
+      const nodeSelectArrayTaxas = document.querySelectorAll(
+        "div.panel-body table tbody"
       );
+      
       const nodeArrayData = [...nodeSelectData];
-      const taxas = {
+      const nodeArrayTable = [...nodeSelectArrayTaxas];
+      
+      let taxas =  ([].slice.call(nodeArrayTable[0].children)).map((children) => ({
+        maturidade : (children.children[0] as HTMLElement).innerText,
+        taxa: (children.children[1] as HTMLElement).innerText,
+      }) );
+      taxas.shift();
+      return {
         date: (nodeArrayData[0] as HTMLElement).innerText,
-
-      }  
-      return taxas;
+        taxas
+      };
     });
   }
 }

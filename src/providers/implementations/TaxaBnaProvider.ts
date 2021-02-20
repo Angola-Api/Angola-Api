@@ -10,9 +10,11 @@ export class TaxaBnaProvider implements ITaxaBnaProvider {
   async getTaxaBna(): Promise<TaxaBna> {
     await this.puppeteer.initialize();
     await this.puppeteer.page.goto("https://www.bna.ao/");
-    const taxa_bna = await this.extractData();
+    const taxa = await this.extractData();
     await this.puppeteer.browser.close();
-    return taxa_bna;
+    return {
+      taxa,
+    };
   }
   private async extractData() {
     return await this.puppeteer.page.evaluate(() => {
@@ -21,8 +23,9 @@ export class TaxaBnaProvider implements ITaxaBnaProvider {
       );
       const nodeArray = [...nodeSelect];
       console.log(nodeArray);
-      const taxa_juro = (nodeArray[0].children[0].children[0].children[0].children[1] as HTMLElement).innerText
-      return taxa_juro.replace("\n",'');
+      const taxa_juro = (nodeArray[0].children[0].children[0].children[0]
+        .children[1] as HTMLElement).innerText;
+      return taxa_juro.replace("\n", "");
     });
   }
 }

@@ -6,9 +6,7 @@ export class TaxaBnaUseController {
 
   async handle(req: Request, res: Response) {
     try {
-      return res.json({
-        taxa_bna : await this.taxaBnaUseCase.execute()
-      })
+      return res.json(await this.taxaBnaUseCase.execute());
     } catch (err) {
       return res
         .status(400)

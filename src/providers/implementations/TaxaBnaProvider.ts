@@ -22,7 +22,6 @@ export class TaxaBnaProvider implements ITaxaBnaProvider {
         "BNA-body-mod collapse table"
       );
       const nodeArray = [...nodeSelect];
-      console.log(nodeArray);
       const taxa_juro = (nodeArray[0].children[0].children[0].children[0]
         .children[1] as HTMLElement).innerText;
       return taxa_juro.replace("\n", "");

@@ -3,11 +3,14 @@ import { Puppeteer } from "../../services/Puppeteer";
 import { ITaxaBnaProvider } from "../ITaxaBnaProvider";
 
 export class TaxaBnaProvider implements ITaxaBnaProvider {
-  constructor(private puppeteer: Puppeteer) {}
-
+  private puppeteer: Puppeteer;
+  constructor() {
+    this.puppeteer = new Puppeteer();
+  }
   async getTaxaBna(): Promise<TaxaBna> {
+    await this.puppeteer.initialize();
     await this.puppeteer.page.goto("https://www.bna.ao/");
-    const taxa_bna = this.extractData();
+    const taxa_bna = await this.extractData();
     await this.puppeteer.browser.close();
     return taxa_bna;
   }
@@ -17,8 +20,9 @@ export class TaxaBnaProvider implements ITaxaBnaProvider {
         "BNA-body-mod collapse table"
       );
       const nodeArray = [...nodeSelect];
+      console.log(nodeArray);
       const taxa_juro = (nodeArray[0].children[0].children[0].children[0].children[1] as HTMLElement).innerText
-      return taxa_juro;
+      return taxa_juro.replace("\n",'');
     });
   }
 }

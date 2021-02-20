@@ -8,11 +8,9 @@ const chromeOptions = {
 export class Puppeteer {
   public browser: any;
   public page: any;
-  constructor(){
-    this.initialize();
-  }
+  constructor(){}
 
-   private async initialize() {
+    async initialize() {
     this.browser = await puppeteer.launch(chromeOptions);
     this.page = await this.browser.newPage();
     await this.page.setUserAgent(

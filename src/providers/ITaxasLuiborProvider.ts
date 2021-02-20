@@ -1,4 +1,4 @@
 import {TaxaLuibor} from '../entities/TaxaLuibor'
-export interface ITaxaxLuiborProvider {
+export interface ITaxasLuiborProvider {
    getTaxasLuibor(): Promise<Array<TaxaLuibor>>
 }

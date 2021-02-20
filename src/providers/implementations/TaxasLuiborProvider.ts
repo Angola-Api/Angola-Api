@@ -1,8 +1,8 @@
 import { TaxaLuibor } from "../../entities/TaxaLuibor";
 import { Puppeteer } from "../../services/Puppeteer";
-import { ITaxaxLuiborProvider } from "../ITaxaxLuiborProvider";
+import { ITaxasLuiborProvider } from "../ITaxasLuiborProvider";
 
-export class TaxasLuiborProvider implements ITaxaxLuiborProvider {
+export class TaxasLuiborProvider implements ITaxasLuiborProvider {
   private puppeteer: Puppeteer;
   constructor() {
     this.puppeteer = new Puppeteer();
@@ -25,7 +25,7 @@ export class TaxasLuiborProvider implements ITaxaxLuiborProvider {
       const nodeArrayData = [...nodeSelectData];
       const taxas = {
         date: (nodeArrayData[0] as HTMLElement).innerText,
-        
+
       }  
       return taxas;
     });

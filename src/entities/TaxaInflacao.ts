@@ -1,6 +1,11 @@
 export class TaxaInflacao{
-  public taxa: string
-  public tipo: string
+  public date : string
+  public status : string
+  public taxas : Array<{
+     tipo: string
+     maturidade: string
+  }>
+ 
   constructor(props){
     Object.assign(this, props);
   }

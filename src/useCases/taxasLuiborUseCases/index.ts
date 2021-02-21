@@ -1,11 +1,11 @@
-import {TaxasLuiborProvider} from '../../providers/implementations/TaxasLuiborProvider';
-import {TaxasLuiborUseCase} from "./TaxasLuiborUseCase"
-import {TaxasLuiborUseController} from './TaxasLuiborUseController'
+import {TaxaLuiborProvider} from '../../providers/implementations/TaxaLuiborProvider';
+import {TaxaLuiborUseCase} from "./TaxaLuiborUseCase"
+import {TaxaLuiborUseController} from './TaxaLuiborUseController'
 
-const taxasLuiborProvider = new TaxasLuiborProvider();
-const taxasLuiborUseCase = new TaxasLuiborUseCase(taxasLuiborProvider);
-const taxasLuiborController = new TaxasLuiborUseController(taxasLuiborUseCase) 
+const taxaLuiborProvider = new TaxaLuiborProvider();
+const taxaLuiborUseCase = new TaxaLuiborUseCase(taxaLuiborProvider);
+const taxaLuiborController = new TaxaLuiborUseController(taxaLuiborUseCase) 
 
 export {
-  taxasLuiborController
+  taxaLuiborController
 }

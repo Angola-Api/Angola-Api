@@ -1,12 +1,12 @@
 import { Response, Request } from "express";
-import { TaxasLuiborUseCase } from "./TaxasLuiborUseCase";
+import { TaxaLuiborUseCase } from "./TaxaLuiborUseCase";
 
-export class TaxasLuiborUseController {
-  constructor(private taxasLuiborUseCase: TaxasLuiborUseCase) {}
+export class TaxaLuiborUseController {
+  constructor(private taxaLuiborUseCase: TaxaLuiborUseCase) {}
 
   async handle(req: Request, res: Response) {
     try {
-      return res.json(await this.taxasLuiborUseCase.execute());
+      return res.json(await this.taxaLuiborUseCase.execute());
     } catch (err) {
       return res
         .status(400)

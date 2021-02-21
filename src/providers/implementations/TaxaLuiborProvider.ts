@@ -1,8 +1,8 @@
 import { TaxaLuibor } from "../../entities/TaxaLuibor";
 import { Puppeteer } from "../../services/Puppeteer";
-import { ITaxasLuiborProvider } from "../ITaxasLuiborProvider";
+import { ITaxaLuiborProvider } from "../ITaxaLuiborProvider";
 
-export class TaxasLuiborProvider implements ITaxasLuiborProvider {
+export class TaxaLuiborProvider implements ITaxaLuiborProvider {
   private puppeteer: Puppeteer;
   constructor() {
     this.puppeteer = new Puppeteer();

@@ -1,7 +1,9 @@
 import {INavigator} from '../INavigator'
 
 export class RateExchangeNavigator implements INavigator {
-  constructor(){}
+  constructor(){
+    
+  }
    navigator() {
     const nodeSelectArrayRates = document.querySelectorAll(
       "div#collapsecambios.collapse table tbody"

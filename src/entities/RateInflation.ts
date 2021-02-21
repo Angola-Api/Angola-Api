@@ -1,9 +1,9 @@
-export class TaxaInflacao{
+export class RateInflation{
   public date : string
   public status : string
-  public taxas : Array<{
-     tipo: string
-     maturidade: string
+  public rates : Array<{
+     type: string
+     maturity: string
   }>
  
   constructor(props){

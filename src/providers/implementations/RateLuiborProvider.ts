@@ -1,40 +1,40 @@
-import { TaxaLuibor } from "../../entities/TaxaLuibor";
+import { RateLuibor } from "../../entities/RateLuibor";
 import { Puppeteer } from "../../services/Puppeteer";
-import { ITaxaLuiborProvider } from "../ITaxaLuiborProvider";
+import { IRateLuiborProvider } from "../IRateLuiborProvider";
 
-export class TaxaLuiborProvider implements ITaxaLuiborProvider {
+export class RateLuiborProvider implements IRateLuiborProvider {
   private puppeteer: Puppeteer;
   constructor() {
     this.puppeteer = new Puppeteer();
   }
-  async getTaxasLuibor(): Promise<TaxaLuibor> {
+  async getRateLuibor(): Promise<RateLuibor> {
     await this.puppeteer.initialize();
     await this.puppeteer.page.goto(
       "https://www.bna.ao/Conteudos/Artigos/detalhe_artigo.aspx?idc=378&idi=380&idl=1"
     );
-    const taxas = await this.extractData();
+    const rates = await this.extractData();
     await this.puppeteer.browser.close();
-    return taxas;
+    return rates;
   }
 
   private async extractData() {
     return await this.puppeteer.page.evaluate(() => {
       const nodeSelectData = document.getElementsByClassName("BNA-data");
-      const nodeSelectArrayTaxas = document.querySelectorAll(
+      const nodeSelectArrayRates = document.querySelectorAll(
         "div.panel-body table tbody"
       );
       
       const nodeArrayData = [...nodeSelectData];
-      const nodeArrayTable = [...nodeSelectArrayTaxas];
+      const nodeArrayTable = [...nodeSelectArrayRates];
       
-      let taxas =  ([].slice.call(nodeArrayTable[0].children)).map((children) => ({
-        maturidade : (children.children[0] as HTMLElement).innerText,
-        taxa: (children.children[1] as HTMLElement).innerText,
+      let rates =  ([].slice.call(nodeArrayTable[0].children)).map((children) => ({
+        maturity : (children.children[0] as HTMLElement).innerText,
+        rate: (children.children[1] as HTMLElement).innerText,
       }) );
-      taxas.shift();
+      rates.shift();
       return {
         date: (nodeArrayData[0] as HTMLElement).innerText,
-        taxas
+        rates
       };
     });
   }

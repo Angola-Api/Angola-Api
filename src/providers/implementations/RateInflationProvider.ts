@@ -1,42 +1,42 @@
-import { TaxaInflacao } from "src/entities/TaxaInflacao";
+import { RateInflation } from "../../entities/RateInflation";
 import { Puppeteer } from "../../services/Puppeteer";
-import { ITaxaInflacaoProvider } from "../ITaxaInflacaoProvider";
+import { IRateInflationProvider } from "../IRateInflationProvider";
 
-export class TaxaInflacaoProvider implements ITaxaInflacaoProvider {
+export class RateInflationProvider implements IRateInflationProvider {
   private puppeteer: Puppeteer;
   constructor() {
     this.puppeteer = new Puppeteer();
   }
-   async getTaxaInflacao(): Promise<TaxaInflacao> {
+   async getRateInflation(): Promise<RateInflation> {
     await this.puppeteer.initialize();
     await this.puppeteer.page.goto(
       "https://www.bna.ao/Conteudos/Artigos/detalhe_artigo.aspx?idc=1017&idi=1018&idl=1"
     );
-    const taxas = await this.extractData();
+    const rates = await this.extractData();
     await this.puppeteer.browser.close();
-    return taxas;
+    return rates;
   }
 
   private async extractData() {
     return await this.puppeteer.page.evaluate(() => {
       const nodeSelectData = document.getElementsByClassName("BNA-data");
-      const nodeSelectArrayTaxas = document.querySelectorAll(
+      const nodeSelectArrayRates = document.querySelectorAll(
         "div.panel-body table tbody"
       );
       
       const nodeArrayData = [...nodeSelectData];
-      const nodeArrayTable = [...nodeSelectArrayTaxas];
+      const nodeArrayTable = [...nodeSelectArrayRates];
       
-      let taxas =  ([].slice.call(nodeArrayTable[0].children)).map((children) => ({
-        tipo : (children.children[0] as HTMLElement).innerText,
-        taxa: (children.children[1] as HTMLElement).innerText,
+      let rates =  ([].slice.call(nodeArrayTable[0].children)).map((children) => ({
+        type : (children.children[0] as HTMLElement).innerText,
+        rate: (children.children[1] as HTMLElement).innerText,
       }) );
-      let status = taxas[0].tipo;
-      taxas.shift();
+      let status = rates[0].type;
+      rates.shift();
       return {
         date: (nodeArrayData[0] as HTMLElement).innerText,
         status,
-        taxas
+        rates
       };
     });
   }

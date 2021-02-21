@@ -6,24 +6,8 @@ export class RateBnaProvider implements IRateBnaProvider {
   constructor(private puppeteer: IPuppeteer) {}
 
   async getRateBna(): Promise<RateBna> {
-    const rate = await this.puppeteer.extractData(
-      "https://www.bna.ao/",
-      this.navigate
-    );
-    return rate;
-
+    return await this.puppeteer.extractData();
   }
 
-  private navigate() {
-    const nodeSelect = document.getElementsByClassName(
-      "BNA-body-mod collapse table"
-    );
-    const nodeArray = [...nodeSelect];
-    let rate= (nodeArray[0].children[0].children[0].children[0]
-      .children[1] as HTMLElement).innerText;
-    rate = rate.replace("\n", "")
-    return {
-      rate
-    }
-  }
+  
 }

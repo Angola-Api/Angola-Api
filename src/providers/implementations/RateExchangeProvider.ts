@@ -25,7 +25,7 @@ export class RateExchangeProvider implements IRateExchangeProvider {
 
       let rates = [].slice.call(nodeArrayTable[0].children).map((children) => ({
         currency: (children.children[0] as HTMLElement).innerText,
-        rate: (children.children[1] as HTMLElement).innerText,
+        rate: parseFloat((children.children[1] as HTMLElement).innerText.replace(",",".")),
       }));
       rates.shift();
       return {

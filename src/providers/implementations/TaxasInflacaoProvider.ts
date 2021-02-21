@@ -1,17 +1,13 @@
 import { TaxaInflacao } from "src/entities/TaxaInflacao";
-import { TaxaLuibor } from "../../entities/TaxaLuibor";
 import { Puppeteer } from "../../services/Puppeteer";
 import { ITaxaInflacaoProvider } from "../ITaxaInflacaoProvider";
 
-export class TaxaLuiborProvider implements ITaxaInflacaoProvider {
+export class TaxaInflacaoProvider implements ITaxaInflacaoProvider {
   private puppeteer: Puppeteer;
   constructor() {
     this.puppeteer = new Puppeteer();
   }
-  getTaxaInflacao(): Promise<TaxaInflacao> {
-    throw new Error("Method not implemented.");
-  }
-  async getTaxasLuibor(): Promise<TaxaLuibor[]> {
+   async getTaxaInflacao(): Promise<TaxaInflacao> {
     await this.puppeteer.initialize();
     await this.puppeteer.page.goto(
       "https://www.bna.ao/Conteudos/Artigos/detalhe_artigo.aspx?idc=378&idi=380&idl=1"

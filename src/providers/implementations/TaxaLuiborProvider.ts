@@ -7,7 +7,7 @@ export class TaxaLuiborProvider implements ITaxaLuiborProvider {
   constructor() {
     this.puppeteer = new Puppeteer();
   }
-  async getTaxasLuibor(): Promise<TaxaLuibor[]> {
+  async getTaxasLuibor(): Promise<TaxaLuibor> {
     await this.puppeteer.initialize();
     await this.puppeteer.page.goto(
       "https://www.bna.ao/Conteudos/Artigos/detalhe_artigo.aspx?idc=378&idi=380&idl=1"

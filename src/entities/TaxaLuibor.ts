@@ -1,6 +1,10 @@
 export class TaxaLuibor {
-  public taxa: string
-  public maturidade: string
+  public date : string
+  public taxas : Array<{
+     taxa: string
+     maturidade: string
+  }>
+ 
   constructor(props){
     Object.assign(this, props);
   }

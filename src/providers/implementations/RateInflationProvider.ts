@@ -31,7 +31,7 @@ export class RateInflationProvider implements IRateInflationProvider {
         type : (children.children[0] as HTMLElement).innerText,
         rate: (children.children[1] as HTMLElement).innerText,
       }) );
-      let status = rates[0].tipo;
+      let status = rates[0].type;
       rates.shift();
       return {
         date: (nodeArrayData[0] as HTMLElement).innerText,

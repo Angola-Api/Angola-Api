@@ -1,7 +1,8 @@
-export class TaxaLuibor {
+export class TaxaInflacao{
   public date : string
+  public status : string
   public taxas : Array<{
-     taxa: string
+     tipo: string
      maturidade: string
   }>
  

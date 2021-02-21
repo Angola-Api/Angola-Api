@@ -3,28 +3,25 @@ import { Puppeteer } from "../../services/Puppeteer";
 import { IRateBnaProvider } from "../IRateBnaProvider";
 
 export class RateBnaProvider implements IRateBnaProvider {
-  private puppeteer: Puppeteer;
-  constructor() {
-    this.puppeteer = new Puppeteer();
-  }
+
+  constructor( private puppeteer: Puppeteer){}
   async getRateBna(): Promise<RateBna> {
-    await this.puppeteer.initialize();
-    await this.puppeteer.page.goto("https://www.bna.ao/");
-    const rate = await this.extractData();
-    await this.puppeteer.browser.close();
+    await this.puppeteer.openBrowser("https://www.bna.ao/");
+    const rate = await this.puppeteer.extractData(this.navigate)
+    await this.puppeteer.closeBrowser();
     return {
       rate,
     };
   }
-  private async extractData() {
-    return await this.puppeteer.page.evaluate(() => {
-      const nodeSelect = document.getElementsByClassName(
-        "BNA-body-mod collapse table"
-      );
-      const nodeArray = [...nodeSelect];
-      const rate_interest = (nodeArray[0].children[0].children[0].children[0]
-        .children[1] as HTMLElement).innerText;
-      return rate_interest.replace("\n", "");
-    });
-  }
+  
+  private navigate(){
+    const nodeSelect = document.getElementsByClassName(
+      "BNA-body-mod collapse table"
+    );
+    const nodeArray = [...nodeSelect];
+    const rate_interest = (nodeArray[0].children[0].children[0].children[0]
+      .children[1] as HTMLElement).innerText;
+    return rate_interest.replace("\n", "");
+  } 
+ 
 }

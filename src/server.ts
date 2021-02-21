@@ -1,9 +1,10 @@
-import express from "express";
-import router from "./routers";
+import setUpRoutes from '@config/router';
+import express from 'express';
+
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
-app.use(router);
-const PORT = process.env.PORT || 5000;
+setUpRoutes(app);
 
 app.listen(PORT);

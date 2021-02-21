@@ -1,6 +1,6 @@
-import {IRateBnaNavigator} from '../IRateBnaNavigator'
+import {INavigator} from '../INavigator'
 
-export class RateBnaNavigator implements IRateBnaNavigator {
+export class RateBnaNavigator implements INavigator {
   constructor(){}
    navigator() {
     const nodeSelect = document.getElementsByClassName(

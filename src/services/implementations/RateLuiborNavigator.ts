@@ -1,6 +1,6 @@
 import {INavigator} from '../INavigator'
 
-export class RateInflationNavigator implements INavigator {
+export class RateLuiborNavigator implements INavigator {
   constructor(){}
    navigator() {
     const nodeSelectData = document.getElementsByClassName("BNA-data");

@@ -17,12 +17,10 @@ export class RateExchangeProvider implements IRateExchangeProvider {
 
   private async extractData() {
     return await this.puppeteer.page.evaluate(() => {
-      const nodeSelectData = document.getElementsByClassName("BNA-data");
       const nodeSelectArrayRates = document.querySelectorAll(
         "div#collapsecambios.collapse table tbody"
       );
 
-      const nodeArrayData = [...nodeSelectData];
       const nodeArrayTable = [...nodeSelectArrayRates];
 
       let rates = [].slice.call(nodeArrayTable[0].children).map((children) => ({
@@ -31,8 +29,7 @@ export class RateExchangeProvider implements IRateExchangeProvider {
       }));
       rates.shift();
       return {
-        date: (nodeArrayData[0] as HTMLElement).innerText,
-        rates,
+        rates
       };
     });
   }

@@ -1,12 +1,12 @@
 import { Response, Request } from "express";
-import { TaxaBnaUseCase } from "./TaxaBnaUseCase";
+import { RateBnaUseCase } from "./RateBnaUseCase";
 
-export class TaxaBnaUseController {
-  constructor(private taxaBnaUseCase: TaxaBnaUseCase) {}
+export class RateBnaUseController {
+  constructor(private rateBnaUseCase: RateBnaUseCase) {}
 
   async handle(req: Request, res: Response) {
     try {
-      return res.json(await this.taxaBnaUseCase.execute());
+      return res.json(await this.rateBnaUseCase.execute());
     } catch (err) {
       return res
         .status(400)

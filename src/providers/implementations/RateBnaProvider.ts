@@ -1,19 +1,19 @@
-import { TaxaBna } from "../../entities/TaxaBna";
+import { RateBna } from "../../entities/RateBna";
 import { Puppeteer } from "../../services/Puppeteer";
-import { ITaxaBnaProvider } from "../ITaxaBnaProvider";
+import { IRateBnaProvider } from "../IRateBnaProvider";
 
-export class TaxaBnaProvider implements ITaxaBnaProvider {
+export class RateBnaProvider implements IRateBnaProvider {
   private puppeteer: Puppeteer;
   constructor() {
     this.puppeteer = new Puppeteer();
   }
-  async getTaxaBna(): Promise<TaxaBna> {
+  async getRateBna(): Promise<RateBna> {
     await this.puppeteer.initialize();
     await this.puppeteer.page.goto("https://www.bna.ao/");
-    const taxa = await this.extractData();
+    const rate = await this.extractData();
     await this.puppeteer.browser.close();
     return {
-      taxa,
+      rate,
     };
   }
   private async extractData() {
@@ -22,9 +22,9 @@ export class TaxaBnaProvider implements ITaxaBnaProvider {
         "BNA-body-mod collapse table"
       );
       const nodeArray = [...nodeSelect];
-      const taxa_juro = (nodeArray[0].children[0].children[0].children[0]
+      const rate_interest = (nodeArray[0].children[0].children[0].children[0]
         .children[1] as HTMLElement).innerText;
-      return taxa_juro.replace("\n", "");
+      return rate_interest.replace("\n", "");
     });
   }
 }

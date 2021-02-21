@@ -31,8 +31,8 @@ export class Puppeteer {
   async extractData() {
     await this.openBrowser();
     let externalFunction = Object.assign(this.navigator);
-    let navigateResult = await this.page.evaluate(externalFunction);
+    let navigationResult = await this.page.evaluate(externalFunction);
     await this.closeBrowser();
-    return navigateResult;
+    return navigationResult;
   }
 }

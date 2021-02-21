@@ -1,7 +1,7 @@
-import { IvalidatePhone } from '../../lib/ivalidate-phone';
-import { IgetOperator } from '../../lib/iget-operator';
+import { IvalidatePhone } from '../../lib/IvalidatePhone';
+import { IgetOperator } from '../../lib/IgetOperator';
 import { Operator } from '../../contants';
-import { ValidatePhoneUserCase } from './validate-phone-user-case';
+import { ValidatePhoneUserCase } from './ValidatePhoneCaserCase';
 
 const makeValidatePhoneSub = (): IvalidatePhone => {
   class ValidatePhoneSub implements IvalidatePhone {

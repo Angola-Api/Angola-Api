@@ -1,4 +1,4 @@
-import { ValidatePhone } from './validate-phone';
+import { ValidatePhone } from './validatePhone';
 
 const makeSut = () => ({ sut: new ValidatePhone() });
 

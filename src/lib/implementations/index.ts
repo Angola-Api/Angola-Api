@@ -1,2 +1,2 @@
-export * from './get-operator';
-export * from './validate-phone';
+export * from './getOperator';
+export * from './validatePhone';

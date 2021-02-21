@@ -1,5 +1,5 @@
 import { Operator } from '../../contants';
-import { IgetOperator } from '../iget-operator';
+import { IgetOperator } from '../IgetOperator';
 export class GetOperator implements IgetOperator {
   getOperator(phone: string): string {
     const initial = parseInt(phone.substring(4, 6));

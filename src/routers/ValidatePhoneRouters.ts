@@ -1,11 +1,10 @@
 import { Router } from 'express';
-import { validatePhoneController } from '../useCases/validate-phone-use-cases';
+import { validatePhoneController } from '../useCases/validatePhoneUserCases';
 
 const ValidatePhoneRouter = (router = Router()) => {
-  router.get('/validatePhone/:phone', async (req, res) => {
+  router.get('/validate-phone/:phone', async (req, res) => {
     return validatePhoneController.handle(req, res);
   });
-
   return router;
 };
 

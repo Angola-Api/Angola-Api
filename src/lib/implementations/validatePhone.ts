@@ -1,4 +1,4 @@
-import { IvalidatePhone } from '../ivalidate-phone';
+import { IvalidatePhone } from '../IvalidatePhone';
 
 export class ValidatePhone implements IvalidatePhone {
   validate(phone: string): boolean {

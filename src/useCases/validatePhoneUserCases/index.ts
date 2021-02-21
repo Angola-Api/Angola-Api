@@ -1,6 +1,6 @@
 import { GetOperator, ValidatePhone } from '../../lib/implementations';
-import { ValidatePhoneUserCase } from './validate-phone-user-case';
-import { ValidatePhoneController } from './validate-phone-controller';
+import { ValidatePhoneUserCase } from './ValidatePhoneCaserCase';
+import { ValidatePhoneController } from './ValidatePhoneController';
 
 const getOperator = new GetOperator();
 const validatePhone = new ValidatePhone();

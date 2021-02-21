@@ -1,4 +1,4 @@
-import { GetOperator } from './get-operator';
+import { GetOperator } from './getOperator';
 import { Operator } from '../../contants';
 const makeSut = () => ({ sut: new GetOperator() });
 

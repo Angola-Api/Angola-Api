@@ -1,6 +1,6 @@
 import { Express } from 'express';
-import ValidatePhoneRouter from '../routers/validate-phone-routers';
-import banksRateRouter from '../routers/banks-rate-roter';
+import ValidatePhoneRouter from '../routers/ValidatePhoneRouters';
+import banksRateRouter from '../routers/BanksRateRoter';
 
 const setUpRoutes = (app: Express): void => {
   app.use('/api/v1', banksRateRouter());

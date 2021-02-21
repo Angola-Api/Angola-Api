@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { IvalidatePhoneUserCase } from './ivalidate-phone-user-case';
+import { IvalidatePhoneUserCase } from './IvalidatePhoneUserCase';
 
 export class ValidatePhoneController {
   constructor(private readonly validatePhoneUserCase: IvalidatePhoneUserCase) {}

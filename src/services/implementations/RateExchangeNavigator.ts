@@ -1,6 +1,6 @@
 import {INavigator} from '../INavigator'
 
-export class RateBnaNavigator implements INavigator {
+export class RateExchangeNavigator implements INavigator {
   constructor(){}
    navigator() {
     const nodeSelectArrayRates = document.querySelectorAll(

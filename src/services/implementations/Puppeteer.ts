@@ -8,30 +8,26 @@ const chromeOptions = {
 export class Puppeteer {
   public browser: any;
   public page: any;
-  constructor(){}
+  constructor() {}
 
-    async openBrowser(url : string) {
+  async openBrowser(url: string) {
     this.browser = await puppeteer.launch(chromeOptions);
     this.page = await this.browser.newPage();
     await this.page.setUserAgent(
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36"
     );
-    await this.page.goto("https://www.bna.ao/");
+    return await this.page.goto(url);
   }
 
-  async closeBrowser(){
-    await this.browser.close();
-  } 
-  async extractData(navigation : Function) {
-    return await this.page.evaluate(() => {
-       return navigation();
-    });
+  private async closeBrowser() {
+    return await this.browser.close();
   }
 
+  async extractData(url: string, navigator: Function) {
+    await this.openBrowser(url);
+    let externalFunction = Object.assign(navigator);
+    let navigateResult = await this.page.evaluate(externalFunction);
+    await this.closeBrowser();
+    return navigateResult;
+  }
 }
-
-
-
-
-
-

@@ -1,5 +1,5 @@
 import { GetOperator } from './getOperator';
-import { Operator } from '../../contants';
+import { Operator } from '../../constants';
 const makeSut = () => ({ sut: new GetOperator() });
 
 describe('GetOPerator', () => {

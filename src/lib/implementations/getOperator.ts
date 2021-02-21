@@ -1,4 +1,4 @@
-import { Operator } from '../../contants';
+import { Operator } from '../../constants';
 import { IgetOperator } from '../IgetOperator';
 export class GetOperator implements IgetOperator {
   getOperator(phone: string): string {

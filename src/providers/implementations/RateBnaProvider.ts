@@ -1,27 +1,29 @@
 import { RateBna } from "../../entities/RateBna";
-import { Puppeteer } from "../../services/Puppeteer";
+import { IPuppeteer } from "../../services/IPuppeteer";
 import { IRateBnaProvider } from "../IRateBnaProvider";
 
 export class RateBnaProvider implements IRateBnaProvider {
+  constructor(private puppeteer: IPuppeteer) {}
 
-  constructor( private puppeteer: Puppeteer){}
   async getRateBna(): Promise<RateBna> {
-    await this.puppeteer.openBrowser("https://www.bna.ao/");
-    const rate = await this.puppeteer.extractData(this.navigate)
-    await this.puppeteer.closeBrowser();
-    return {
-      rate,
-    };
+    const rate = await this.puppeteer.extractData(
+      "https://www.bna.ao/",
+      this.navigate
+    );
+    return rate;
+
   }
-  
-  private navigate(){
+
+  private navigate() {
     const nodeSelect = document.getElementsByClassName(
       "BNA-body-mod collapse table"
     );
     const nodeArray = [...nodeSelect];
-    const rate_interest = (nodeArray[0].children[0].children[0].children[0]
+    let rate= (nodeArray[0].children[0].children[0].children[0]
       .children[1] as HTMLElement).innerText;
-    return rate_interest.replace("\n", "");
-  } 
- 
+    rate = rate.replace("\n", "")
+    return {
+      rate
+    }
+  }
 }

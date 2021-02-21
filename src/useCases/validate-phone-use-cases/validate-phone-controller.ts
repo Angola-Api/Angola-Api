@@ -6,10 +6,13 @@ export class ValidatePhoneController {
 
   async handle(request: Request, response: Response): Promise<Response> {
     try {
-      if (!request.body['phone'])
-        return response.status(400).json({ message: 'missing param error' });
+      if (!request.params['phone'])
+        return response.status(400).json({
+          message:
+            'missing param error, you need to pass phone number on param',
+        });
 
-      const { phone } = request.body;
+      const { phone } = request.params;
 
       const operator = this.validatePhoneUserCase.execute({ phone });
 

@@ -1,4 +1,4 @@
-import { Router, Application } from 'express';
+import { Router } from 'express';
 import { rateBnaController } from '../useCases/rateBnaUseCases';
 import { rateLuiborController } from '../useCases/rateLuiborUseCases';
 import { rateInflationController } from '../useCases/rateInflationUseCases';

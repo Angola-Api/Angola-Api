@@ -1,6 +1,6 @@
 import { IvalidatePhone } from '../../lib/IvalidatePhone';
 import { IgetOperator } from '../../lib/IgetOperator';
-import { Operator } from '../../contants';
+import { Operator } from '../../constants';
 import { ValidatePhoneUserCase } from './ValidatePhoneCaserCase';
 
 const makeValidatePhoneSub = (): IvalidatePhone => {

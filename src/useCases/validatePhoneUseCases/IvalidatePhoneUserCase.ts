@@ -1,4 +1,4 @@
-import { IvalidatePhoneDTO } from './ValidatePhone-dto';
+import { IvalidatePhoneDTO } from './ValidatePhoneDTO';
 
 export interface IvalidatePhoneUserCase {
   execute(data: IvalidatePhoneDTO): string;

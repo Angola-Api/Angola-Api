@@ -1,6 +1,6 @@
 import { IvalidatePhone } from '../../lib/IvalidatePhone';
 import { IgetOperator } from '../../lib/IgetOperator';
-import { IvalidatePhoneDTO } from './ValidatePhone-dto';
+import { IvalidatePhoneDTO } from './ValidatePhoneDTO';
 import { IvalidatePhoneUserCase } from './IvalidatePhoneUserCase';
 
 export class ValidatePhoneUserCase implements IvalidatePhoneUserCase {

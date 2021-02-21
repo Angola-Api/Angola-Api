@@ -1,6 +1,6 @@
 import express from 'express';
 import {taxaBnaController} from '../useCases/taxaBnaUseCases'
-import {taxaLuiborController} from "../useCases/taxasLuiborUseCases"
+import {taxaLuiborController} from "../useCases/taxaLuiborUseCases"
 
 const router = express.Router();
 

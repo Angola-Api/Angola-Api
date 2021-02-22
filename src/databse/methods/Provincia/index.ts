@@ -1,7 +1,7 @@
 import { ProvinciaModel } from '../../models';
 import { Provincia } from '../../../entities/Provincia';
 import { GetAllProvinces, GetOneProvince } from './ProvinceProtocols';
-export class ProvinceMethos implements GetAllProvinces, GetOneProvince {
+export class ProvinceMethods implements GetAllProvinces, GetOneProvince {
   async getAll(): Promise<Array<Provincia>> {
     const provinces = await ProvinciaModel.find({});
     return provinces;

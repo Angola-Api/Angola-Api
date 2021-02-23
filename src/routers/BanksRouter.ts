@@ -5,6 +5,8 @@ import { rateInflationController } from "../useCases/rateInflationUseCases";
 import { rateExchangeController } from "../useCases/rateExchangeUseCases";
 import { rateForwardExchangeController } from "../useCases/rateForwardExchangeUseCases";
 import { rateTermDepositController } from "../useCases/rateTermDepositUseCases";
+import { rateComercialExchangeController } from "../useCases/rateComercialExchangeUseCases";
+
 
 const banksRouter = (router = Router()) => {
   router.get("/banks/rates/interest/bna", async (req, res) => {
@@ -25,6 +27,9 @@ const banksRouter = (router = Router()) => {
 
   router.get("/banks/rates/exchange", async (req, res) => {
     return rateExchangeController.handle(req, res);
+  });
+  router.get("/banks/rates/comercial-exchange", async (req, res) => {
+    return rateComercialExchangeController.handle(req, res);
   });
   router.get("/banks/rates/forward-exchange/", async (req, res) => {
     return rateForwardExchangeController.handle(req, res);

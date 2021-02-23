@@ -7,7 +7,6 @@ import { rateForwardExchangeController } from "../useCases/rateForwardExchangeUs
 import { rateTermDepositController } from "../useCases/rateTermDepositUseCases";
 import { rateComercialExchangeController } from "../useCases/rateComercialExchangeUseCases";
 
-
 const banksRouter = (router = Router()) => {
   router.get("/banks/rates/interest/bna", async (req, res) => {
     return rateBnaController.handle(req, res);

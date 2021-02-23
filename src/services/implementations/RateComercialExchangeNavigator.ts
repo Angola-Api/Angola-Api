@@ -10,31 +10,122 @@ export class RateComercialExchangeNavigator implements INavigator {
 
     const nodeArrayData = [...nodeSelectData];
     const nodeArrayTable = [...nodeSelectArrayRates];
-    console.log(nodeArrayTable);
+
     let banks = [].slice
       .call(nodeArrayTable[2].children)
       .map((children, index) => {
-        if (index > 0)
+        if (index > 3)
           return {
             name: (children.children[0] as HTMLElement).innerText,
-            rates: [
-              {
-                days: 30,
-                rate: (children.children[1] as HTMLElement).innerText,
-              },
-              {
-                days: 90,
-                rate: (children.children[2] as HTMLElement).innerText,
-              },
-              {
-                days: 360,
-                rate: (children.children[3] as HTMLElement).innerText,
-              },
-            ],
+            current: {
+              buy: [
+                {
+                  currency: "USD/AOA",
+                  quotation: parseFloat(
+                    (children.children[1] as HTMLElement).innerText.replace(
+                      ",",
+                      "."
+                    )
+                  ),
+                },
+                {
+                  currency: "EUR/AOA",
+                  quotation: parseFloat(
+                    (children.children[2] as HTMLElement).innerText.replace(
+                      ",",
+                      "."
+                    )
+                  ),
+                },
+              ],
+              sell: [
+                {
+                  currency: "USD/AOA",
+                  quotation: parseFloat(
+                    (children.children[3] as HTMLElement).innerText.replace(
+                      ",",
+                      "."
+                    )
+                  ),
+                },
+                {
+                  currency: "EUR/AOA",
+                  quotation: parseFloat(
+                    (children.children[4] as HTMLElement).innerText.replace(
+                      ",",
+                      "."
+                    )
+                  ),
+                },
+              ],
+            },
+            lastDay: {
+              buy: [
+                {
+                  currency: "USD/AOA",
+                  quotation: parseFloat(
+                    (children.children[5] as HTMLElement).innerText.replace(
+                      ",",
+                      "."
+                    )
+                  ),
+                },
+                {
+                  currency: "EUR/AOA",
+                  quotation: parseFloat(
+                    (children.children[6] as HTMLElement).innerText.replace(
+                      ",",
+                      "."
+                    )
+                  ),
+                },
+              ],
+              sell: [
+                {
+                  currency: "USD/AOA",
+                  quotation: parseFloat(
+                    (children.children[7] as HTMLElement).innerText.replace(
+                      ",",
+                      "."
+                    )
+                  ),
+                },
+                {
+                  currency: "EUR/AOA",
+                  quotation: parseFloat(
+                    (children.children[8] as HTMLElement).innerText.replace(
+                      ",",
+                      "."
+                    )
+                  ),
+                },
+              ],
+            },
+            variation: {
+              buy: [
+                {
+                  currency: "USD/AOA",
+                  variation: (children.children[9] as HTMLElement).innerText,
+                },
+                {
+                  currency: "EUR/AOA",
+                  variation: (children.children[10] as HTMLElement).innerText,
+                },
+              ],
+              sell: [
+                {
+                  currency: "USD/AOA",
+                  variation: (children.children[11] as HTMLElement).innerText,
+                },
+                {
+                  currency: "EUR/AOA",
+                  variation: (children.children[12] as HTMLElement).innerText,
+                },
+              ],
+            },
           };
       });
-    banks.shift();
-    banks.shift();
+    banks = banks.slice(4, banks.length + 1);
     return {
       date: (nodeArrayData[0] as HTMLElement).innerText,
       banks,

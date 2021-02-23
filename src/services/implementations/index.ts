@@ -5,4 +5,5 @@ export * from './RateForwardExchangeNavigator';
 export * from './RateInflationNavigator';
 export * from './RateLuiborNavigator';
 export * from './RateTermDepositNavigator';
+export * from './RateComercialExchangeNavigator';
 

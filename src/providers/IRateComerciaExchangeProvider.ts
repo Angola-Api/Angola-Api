@@ -1,4 +1,4 @@
-import {RateComerciaExchange} from '../entities/RateComerciaExchange'
+import {RateComercialExchange} from '../entities/RateComercialExchange'
 export interface IRateComerciaExchangeProvider {
-   getRateComerciaExchange(): Promise<RateComerciaExchange>
+   getRateComerciaExchange(): Promise<RateComercialExchange>
 }

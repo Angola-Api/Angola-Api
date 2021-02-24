@@ -1,10 +1,26 @@
 import setUpRoutes from '@config/router';
 import express from 'express';
 
-const PORT = process.env.PORT || 5000;
+import mongoose from 'mongoose';
+import { environment } from './config/environment';
 
-const app = express();
+async function start() {
+  try {
+    await mongoose.connect(environment.mongoUrl, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+    });
 
-setUpRoutes(app);
+    const PORT = process.env.PORT || 5000;
+    const app = express();
 
-app.listen(PORT);
+    setUpRoutes(app);
+
+    app.listen(PORT);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+start().then();

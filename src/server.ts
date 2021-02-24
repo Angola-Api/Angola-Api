@@ -17,7 +17,9 @@ async function start() {
 
     setUpRoutes(app);
 
-    app.listen(PORT);
+    app.listen(PORT, () => {
+      console.log('server listening on port:5000');
+    });
   } catch (error) {
     console.log(error);
   }

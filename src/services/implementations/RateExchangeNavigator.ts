@@ -12,8 +12,8 @@ export class RateExchangeNavigator implements INavigator {
     const nodeArrayTable = [...nodeSelectArrayRates];
 
     let rates = [].slice.call(nodeArrayTable[0].children).map((children) => ({
-      currency: (children.children[0] as HTMLElement).innerText,
-      rate: parseFloat((children.children[1] as HTMLElement).innerText.replace(",",".")),
+      currency: (children.children[0] as HTMLElement)?.innerText,
+      rate: parseFloat((children.children[1] as HTMLElement)?.innerText.replace(",",".")),
     }));
     rates.shift();
     return {

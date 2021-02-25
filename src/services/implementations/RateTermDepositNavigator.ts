@@ -12,7 +12,7 @@ export class RateTermDepositNavigator implements INavigator {
     const nodeArrayTable = [...nodeSelectArrayRates];
     console.log(nodeArrayTable);
     let banks = [].slice
-      .call(nodeArrayTable[2].children)
+      .call(nodeArrayTable[2]?.children)
       .map((children, index) => {
         if (index > 0)
           return {

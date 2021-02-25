@@ -12,12 +12,12 @@ export class RateLuiborNavigator implements INavigator {
     const nodeArrayTable = [...nodeSelectArrayRates];
     
     let rates =  ([].slice.call(nodeArrayTable[0].children)).map((children) => ({
-      maturity : (children.children[0] as HTMLElement).innerText,
-      rate: (children.children[1] as HTMLElement).innerText,
+      maturity : (children.children[0] as HTMLElement)?.innerText,
+      rate: (children.children[1] as HTMLElement)?.innerText,
     }) );
     rates.shift();
     return {
-      date: (nodeArrayData[0] as HTMLElement).innerText,
+      date: (nodeArrayData[0] as HTMLElement)?.innerText,
       rates
     };
   }

@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { getMunicipioController } from '../useCases/Municipio/getMunicipiosUseCase';
 
 const MunicipioRouter = (router = Router()) => {
-  router.get('/municipios', async (req, res) => {
+  router.get('/county', async (req, res) => {
     return getMunicipioController.handle(req, res);
   });
   return router;

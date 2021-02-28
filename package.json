@@ -1,6 +1,6 @@
 {
   "name": "nodesetup",
-  "version": "1",
+  "version": "1.0.0",
   "description": "setup for node js projects",
   "main": "src/index.js",
   "author": "Lutero Elavoco",

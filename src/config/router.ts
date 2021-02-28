@@ -6,9 +6,9 @@ import banksRouter from '../routers/BanksRouter';
 
 const setUpRoutes = (app: Express): void => {
   app.use('/api/v1', banksRouter());
-  app.use('/api/v1', ValidatePhoneRouter());
-  app.use('/api/v1', ProvinceRouter());
-  app.use('/api/v1', MunicipioRouter());
+  app.use('/api/v1/validate', ValidatePhoneRouter());
+  app.use('/api/v1/geography', ProvinceRouter());
+  app.use('/api/v1/geography', MunicipioRouter());
 };
 
 export default setUpRoutes;

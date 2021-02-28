@@ -4,8 +4,9 @@ import { Provincia } from '../../../entities/Provincia';
 
 export class GetProvinceUseCase implements IGetProvinceUSeCase {
   constructor(private getAllprovinces: GetAllProvinces) {}
-  async execute(): Promise<Array<Provincia>> {
+  async execute(): Promise<ReadonlyArray<Provincia>> {
     const provinces = await this.getAllprovinces.getAll();
+
     return provinces;
   }
 }

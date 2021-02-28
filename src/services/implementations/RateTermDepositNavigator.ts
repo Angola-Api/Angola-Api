@@ -12,23 +12,23 @@ export class RateTermDepositNavigator implements INavigator {
     const nodeArrayTable = [...nodeSelectArrayRates];
     console.log(nodeArrayTable);
     let banks = [].slice
-      .call(nodeArrayTable[2].children)
+      .call(nodeArrayTable[2]?.children)
       .map((children, index) => {
         if (index > 0)
           return {
-            name: (children.children[0] as HTMLElement).innerText,
+            name: (children.children[0] as HTMLElement)?.innerText,
             rates: [
               {
                 days: 30,
-                rate: (children.children[1] as HTMLElement).innerText,
+                rate: (children.children[1] as HTMLElement)?.innerText,
               },
               {
                 days: 90,
-                rate: (children.children[2] as HTMLElement).innerText,
+                rate: (children.children[2] as HTMLElement)?.innerText,
               },
               {
                 days: 360,
-                rate: (children.children[3] as HTMLElement).innerText,
+                rate: (children.children[3] as HTMLElement)?.innerText,
               },
             ],
           };
@@ -36,7 +36,7 @@ export class RateTermDepositNavigator implements INavigator {
     banks.shift();
     banks.shift();
     return {
-      date: (nodeArrayData[0] as HTMLElement).innerText,
+      date: (nodeArrayData[0] as HTMLElement)?.innerText,
       banks,
     };
   }

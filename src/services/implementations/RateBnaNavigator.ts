@@ -8,7 +8,7 @@ export class RateBnaNavigator implements INavigator {
     );
     const nodeArray = [...nodeSelect];
     let rate= (nodeArray[0].children[0].children[0].children[0]
-      .children[1] as HTMLElement).innerText;
+      .children[1] as HTMLElement)?.innerText;
     rate = rate.replace("\n", "")
     return {
       rate

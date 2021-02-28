@@ -9,8 +9,8 @@ export class RateForwardExchangeNavigator implements INavigator {
 
     const nodeArrayTable = [...nodeSelectArrayRates];
     let rates = [].slice.call(nodeArrayTable[1].children).map((children) => ({
-      maturity: (children.children[0] as HTMLElement).innerText,
-      rate: parseFloat((children.children[1] as HTMLElement).innerText.replace(",",".")),
+      maturity: (children.children[0] as HTMLElement)?.innerText,
+      rate: parseFloat((children.children[1] as HTMLElement)?.innerText.replace(",",".")),
     }));
     rates.shift();
     rates.pop();

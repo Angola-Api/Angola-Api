@@ -14,12 +14,4 @@ export const MongoHelper = {
   async disconnect(): Promise<void> {
     await mongoose.disconnect();
   },
-  map(Collection: any): any {
-    if (Collection) {
-      const { _id, ...CollectionWithoudId } = Collection;
-      console.log(CollectionWithoudId);
-      return Object.assign({}, CollectionWithoudId, { id: _id });
-    }
-    return null;
-  },
 };

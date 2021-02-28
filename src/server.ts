@@ -1,16 +1,12 @@
 import setUpRoutes from '@config/router';
 import express from 'express';
 
-import mongoose from 'mongoose';
+import { MongoHelper } from './databse/helpers';
 import { environment } from './config/environment';
 
 async function start() {
   try {
-    await mongoose.connect(environment.mongoUrl, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-    });
+    MongoHelper.connect(environment.mongoUrl);
 
     const PORT = process.env.PORT || 5000;
     const app = express();

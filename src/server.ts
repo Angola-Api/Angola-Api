@@ -7,7 +7,6 @@ import { environment } from './config/environment';
 async function start() {
   try {
     MongoHelper.connect(environment.mongoUrl);
-
     const app = express();
 
     setUpRoutes(app);

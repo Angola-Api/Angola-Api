@@ -1,9 +1,22 @@
-import express from "express";
-import router from "./routers";
+import setUpRoutes from '@config/router';
+import express from 'express';
 
-const app = express();
+import { MongoHelper } from './databse/helpers';
+import { environment } from './config/environment';
 
-app.use(router);
-const PORT = process.env.PORT || 5000;
+async function start() {
+  try {
+    MongoHelper.connect(environment.mongoUrl);
+    const app = express();
 
-app.listen(PORT);
+    setUpRoutes(app);
+
+    app.listen(environment.port, () => {
+      console.log('server listening on port:5000');
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+start().then();

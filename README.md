@@ -49,11 +49,11 @@ OBS: SSL está desabilitado nos endpoints.
 Retorna o valor da taxa de juros do Bna.
 
 
-**GET** `http://angola-api.com/api/v1/banks/rates/interest/bna`
+**GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/bna`
 
 ##### Exemplo da consulta
 ```json
-// GET http://angola-api.com/api/v1/banks/rates/interest/bna
+// GET https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/bna
 
 {
   "rate": "15,5%"
@@ -63,11 +63,11 @@ Retorna o valor da taxa de juros do Bna.
 #### Taxa de juros LUIBOR
 Retorna o valor da Taxa Interbancária de Oferta de Fundos do Mercado de Luanda.
 
-**GET** `http://angola-api.com/api/v1/banks/rates/interest/luibor`
+**GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/luibor`
 
 ##### Exemplo da consulta
 ```json
-// GET http://angola-api.com/api/v1/banks/rates/interest/luibor
+// GET https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/luibor
 
 {
   "date": "10 de Setembro de 2020",
@@ -90,11 +90,11 @@ Retorna o valor da Taxa Interbancária de Oferta de Fundos do Mercado de Luanda.
 #### Taxa de inflação
 Retorna o valor da Taxa de inflação do Banco Nacional de Angola.
 
-**GET** `http://angola-api.com/api/v1/banks/rates/inflation`
+**GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/inflation`
 
 ##### Exemplo da consulta
 ```json
-// GET http://angola-api.com/api/v1/banks/rates/inflation
+// GET https://angolaapi.herokuapp.com/api/v1/banks/rates/inflation
 
 {
   "date": "14 de Fevereiro de 2021",
@@ -121,7 +121,7 @@ Retorna o valor da Taxa de inflação do Banco Nacional de Angola.
 Retorna as taxas de câmbio mais importantes do BNA.
 
 
-**GET** `http://angola-api.com/api/v1/banks/rates/exchange`
+**GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/exchange`
 
 ##### Exemplo da consulta
 ```json
@@ -149,11 +149,11 @@ Retorna as taxas de câmbio mais importantes do BNA.
 Retorna a cotação do dolar e euro nos principais bancos comerciais do país.
 
 
-**GET** `http://angola-api.com/api/v1/banks/rates/comercial-exchange`
+**GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/comercial-exchange`
 
 ##### Exemplo da consulta
 ```json
-// GET http://angola-api.com/api/v1/banks/rates/comercial-exchange
+// GET https://angolaapi.herokuapp.com/api/v1/banks/rates/comercial-exchange
 
 {
   "date": "25 de Fevereiro de 2021",
@@ -235,11 +235,11 @@ Retorna a cotação do dolar e euro nos principais bancos comerciais do país.
 Retorna o nome do banco, os dias e as taxas de juros de para depósitos a prazo efetuado pelos mesmos
 
 
-**GET** `http://angola-api.com/api/v1/banks/interest/term-deposit`
+**GET** `https://angolaapi.herokuapp.com/api/v1/banks/interest/term-deposit`
 
 ##### Exemplo da consulta
 ```json
-// GET http://angola-api.com/api/v1/banks/rates/interest/term-deposit
+// GET https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/term-deposit
 
 {
   "date": "25 de Fevereiro de 2021",
@@ -287,11 +287,11 @@ Retorna o nome do banco, os dias e as taxas de juros de para depósitos a prazo 
 #### Províncias
 Retorna a lista de províncias do território nacional ou apenas uma província se o ID for informado.
 
-**GET** `http://angola-api.com/api/v1/geography/provinces`
+**GET** `https://angolaapi.herokuapp.com/api/v1/geography/provinces`
 
 ##### Exemplo da consulta
 ```json
-// GET http://angola-api.com/api/v1/geography/provinces
+// GET https://angolaapi.herokuapp.com/api/v1/geography/provinces
 
 [
   {
@@ -328,11 +328,11 @@ Retorna a lista de províncias do território nacional ou apenas uma província 
  ]
 ```
 
-**GET** `http://angola-api.com/api/v1/geography/provinces/`**[id]**
+**GET** `https://angolaapi.herokuapp.com/api/v1/geography/provinces/`**[id]**
 
 ##### Exemplo da consulta
 ```json
-// GET http://angola-api.com/api/v1/geography/provinces/6032c083c5686966bcc04210
+// GET https://angolaapi.herokuapp.com/api/v1/geography/provinces/6032c083c5686966bcc04210
 
 {
   "id": "6032c083c5686966bcc04210",
@@ -348,11 +348,11 @@ Retorna a lista de províncias do território nacional ou apenas uma província 
 #### Munícipios
 Busca pelos munícipios de uma determinada província
 
-**GET** `http://angola-api.com/api/v1/geography/county?provincia=`**[provincia]**
+**GET** `https://angolaapi.herokuapp.com/api/v1/geography/county?provincia=`**[provincia]**
 
 ##### Exemplo da consulta
 ```json
-// GET http://angola-api.com/api/v1/geography/county?provincia=Luanda
+// GET https://angolaapi.herokuapp.com/api/v1/geography/county?provincia=Luanda
 
 [
   {
@@ -416,11 +416,11 @@ Busca pelos munícipios de uma determinada província
 #### Bilhete de identidade
 Verifica se número informado é um bilhete de identidade nacional.
 
-**GET** `http://angola-api.com/api/v1/validate/bi/`**[bi]**
+**GET** `https://angolaapi.herokuapp.com/api/v1/validate/bi/`**[bi]**
 
 ##### Consulta com sucesso
 ```json
-// GET http://angola-api.com/api/v1/validate/validate/bi/006151112LA041
+// GET https://angolaapi.herokuapp.com/api/v1/validate/validate/bi/006151112LA041
 // Status: 200
 {
   "message": "this is an Angola valid bi number"
@@ -430,7 +430,7 @@ Verifica se número informado é um bilhete de identidade nacional.
 
 ##### Consulta com erro
 ```json
-// GET http://angola-api.com/api/v1/validate/bi/006151112LA04A
+// GET https://angolaapi.herokuapp.com/api/v1/validate/bi/006151112LA04A
 // Status: 400
 {
   "message": "Invalid bi number"
@@ -439,11 +439,11 @@ Verifica se número informado é um bilhete de identidade nacional.
 #### Passaporte
 Retorna se o registo informado é aceitavél como identificador de um passaporte angolano.
 
-**GET** `http://angola-api.com/api/v1/validate/passport/`**[passport]**
+**GET** `https://angolaapi.herokuapp.com/api/v1/validate/passport/`**[passport]**
 
 ##### Consulta com sucesso
 ```json
-// GET http://angola-api.com/api/v1/validate/validate/passport/n1234566
+// GET https://angolaapi.herokuapp.com/api/v1/validate/validate/passport/n1234566
 // Status: 200
 {
   "message": "this is an Angola valid passport number"
@@ -453,7 +453,7 @@ Retorna se o registo informado é aceitavél como identificador de um passaporte
 
 ##### Consulta com erro
 ```json
-// GET http://angola-api.com/api/v1/validate/passport/n12345667
+// GET https://angolaapi.herokuapp.com/api/v1/validate/passport/n12345667
 // Status: 400
 {
   "message": "Invalid passport number"
@@ -463,12 +463,12 @@ Retorna se o registo informado é aceitavél como identificador de um passaporte
 #### Telefone
 Verifica se o número informado é de Angola e a qual operadora pertence.
 
-**GET** `http://angola-api.com/api/v1/validate/phone/`**[phone]**
+**GET** `https://angolaapi.herokuapp.com/api/v1/validate/phone/`**[phone]**
 
 
 ##### Consulta com sucesso
 ```json
-// GET http://angola-api.com/api/v1/validate/phone/+244923445618
+// GET https://angolaapi.herokuapp.com/api/v1/validate/phone/+244923445618
 // Status: 200
 {
   "message": "this is an Angola valid phone number",
@@ -479,7 +479,7 @@ Verifica se o número informado é de Angola e a qual operadora pertence.
 
 ##### Consulta com erro
 ```json
-// GET http://angola-api.com/api/v1/validate/phone/+8599562562
+// GET https://angolaapi.herokuapp.com/api/v1/validate/phone/+8599562562
 // Status: 400
 {
   "message": "Invalid phone number"

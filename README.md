@@ -420,7 +420,7 @@ Verifica se número informado é um bilhete de identidade nacional.
 
 ##### Consulta com sucesso
 ```json
-// GET https://angolaapi.herokuapp.com/api/v1/validate/validate/bi/006151112LA041
+// GET https://angolaapi.herokuapp.com/api/v1/validate/bi/006151112LA041
 // Status: 200
 {
   "message": "this is an Angola valid bi number"
@@ -443,7 +443,7 @@ Retorna se o registo informado é aceitavél como identificador de um passaporte
 
 ##### Consulta com sucesso
 ```json
-// GET https://angolaapi.herokuapp.com/api/v1/validate/validate/passport/n1234566
+// GET https://angolaapi.herokuapp.com/api/v1/validate/passport/n1234566
 // Status: 200
 {
   "message": "this is an Angola valid passport number"

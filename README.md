@@ -1,14 +1,44 @@
 <h1 align="center"><img src="./public/logo.png"></h1>
+<h1 align="center">
+    Angola API
+</h1>
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Angola-Api/Angola-Api/">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Angola-Api/Angola-Api/">
+  
+  <a href="https://github.com/Angola-Api/Angola-Api//commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Angola-Api/Angola-Api/">
+  </a>
+
+  <a href="https://github.com/Angola-Api/Angola-Api//issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/Angola-Api/Angola-Api/">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+</p>
+
+
 <div align="center">
-  <p>
+  <p align="center">
     <strong>Vamos transformar Angola em uma API?</strong>
     <br/>
     <label> Que tal pegarmos a ideia do Brasil Api e levarmos em Angola ?</label>
   </p>
  </div>
  
- ## Sobre a ideia
- Imagina um país com 1.246.700 km² com cerca de 30 milhões de habitantes distribuido em 18 províncias, mas não possuir uma API pública para consulta de diversas informações sobre finanças, geografia ou validação de dados. Pois é, um grande problema. 
+ <p align="center">
+  <a href="#bulb-sobre-o-projecto">Sobre o Projecto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#hammer_and_wrench-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#link-endpoints">Endpoints</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#open_hands-como-contribuir">Como Contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-memo-License">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#busts_in_silhouette-colaboradores">Colaboradores</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#bust_in_silhouette-autores">Autores</a>
+</p>
+
+ # :bulb: Sobre o projecto
+ Imagina um país com 1.246.700 km² com cerca de 30 milhões de habitantes distribuído em 18 províncias, mas não possui uma API pública para consulta de diversas informações sobre finanças, geografia ou validação de dados. Pois é, um grande problema. 
  
  Face a esse problema nos inspiramos na organização brasileira chamada [Brasil Api](https://github.com/BrasilAPI/BrasilAPI/) e decidimos reunir o maior número de informações necessária sobre Angola e distribuir de forma gratuita. 
 
@@ -24,11 +54,11 @@
 Todas as informações acima são extraídas diretamente do site https://www.bna.ao. 
 <br/>
 <br/>
-Também decidimos disponiblizar end points para validar as seguintes informações : 
+Também decidimos disponiblizar endpoints para validar as seguintes informações : 
  <ul>
    <li> Bilhete de identidade</li>
    <li> Pasaporte </li>
-   <li> Número de celular</li>
+   <li> Número de telefone</li>
  </ul>
 Importante realçar que também conseguimos disponiblizar conteúdos como : 
  <ul>
@@ -36,9 +66,15 @@ Importante realçar que também conseguimos disponiblizar conteúdos como :
    <li> Lista de munícipios de uma província </li>
    <li> Lista de distritos de um munícipio</li>
  </ul>
+ 
+# :hammer_and_wrench: Tecnologias
 
+Este projecto foi construído usando as seguintes tecnologias:
 
-## Endpoints
+- [Javascript](https://www.w3schools.com/js/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## :link: Endpoints
 Embaixo segue a lista e descrição de endpoints implementados nesse projecto.
 OBS: SSL está desabilitado nos endpoints.
 
@@ -46,7 +82,7 @@ OBS: SSL está desabilitado nos endpoints.
 
 
 #### Taxa de juros do Banco Nacional de Angola
-Retorna o valor da taxa de juros do Bna.
+Retorna o valor da taxa de juros do BNA.
 
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/bna`
@@ -61,7 +97,7 @@ Retorna o valor da taxa de juros do Bna.
 ```
 
 #### Taxa de juros LUIBOR
-Retorna o valor da Taxa Interbancária de Oferta de Fundos do Mercado de Luanda.
+Retorna o valor da taxa interbancária de oferta de fundos do mercado de Luanda.
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/luibor`
 
@@ -88,7 +124,7 @@ Retorna o valor da Taxa Interbancária de Oferta de Fundos do Mercado de Luanda.
 }
 ```
 #### Taxa de inflação
-Retorna o valor da Taxa de inflação do Banco Nacional de Angola.
+Retorna o valor da taxa de inflação do Banco Nacional de Angola.
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/inflation`
 
@@ -485,17 +521,26 @@ Verifica se o número informado é de Angola e a qual operadora pertence.
   "message": "Invalid phone number"
 }
 ```
+# :open_hands: Como contribuir
 
+### Chega de Português rsrsrs, abaixo os passos para contribuir no Angola Api 	
 
-## Chega de Português rsrsrs, abaixo os passos para contribuir no Angola Api 	
+1. Faça um Fork no projecto (https://github.com/Angola-Api/Angola-Api)	
+2. Cria uma branch com a tua feature (`git checkout -b angolaapi/new-feature`)	
+3. Faça um Commit com as tuas mudanças (`git commit -am 'Add new feature'`)	
+4. Faça um Push para a Branch (`git push origin feature/new-feature`)	
+5. Cria uma Pull Request
 
-1. Fork it (https://github.com/Angola-Api/Angola-Api)	
-2. Create your feature branch (`git checkout -b feature/fooBar`)	
-3. Commit your changes (`git commit -am 'Add some fooBar'`)	
-4. Push to the branch (`git push origin feature/fooBar`)	
-5. Create a new Pull Request
+# :memo: License
 
-## Autores
+Este projeto está sob a licença do MIT. Acessa: (https://opensource.org/licenses/MIT) para mais detalhes.
+
+# :busts_in_silhouette: Colaboradores
+
+| [<img src="https://github.com/carlcr.png?size=115" width=115><br><sub>@carlcr</sub>](https://github.com/carlcr) |
+| :---: |
+
+# :bust_in_silhouette: Autores
 
 | [<img src="https://github.com/luteroelavoco.png?size=115" width=115><br><sub>@luteroelavoco</sub>](https://github.com/luteroelavoco) | [<img src="https://github.com/adilsonfuxe.png?size=115" width=115><br><sub>@adilsonfuxe</sub>](https://github.com/adilsonfuxe) |
 | :---: | :---: |

@@ -7,11 +7,11 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Angola-Api/Angola-Api/">
   
-  <a href="https://github.com/Angola-Api/Angola-Api//commits/master">
+  <a href="https://github.com/Angola-Api/Angola-Api/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Angola-Api/Angola-Api/">
   </a>
 
-  <a href="https://github.com/Angola-Api/Angola-Api//issues">
+  <a href="https://github.com/Angola-Api/Angola-Api/issues">
     <img alt="Repository issues" src="https://img.shields.io/github/issues/Angola-Api/Angola-Api/">
   </a>
 

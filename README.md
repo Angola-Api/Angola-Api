@@ -2,22 +2,12 @@
 <h1 align="center">
     Angola API
 </h1>
+
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Angola-Api/Angola-Api/">
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Angola-Api/Angola-Api/">
-  
-  <a href="https://github.com/Angola-Api/Angola-Api/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Angola-Api/Angola-Api/">
-  </a>
-
-  <a href="https://github.com/Angola-Api/Angola-Api/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/Angola-Api/Angola-Api/">
-  </a>
-
+  <img alt="Angola API" src="https://img.shields.io/static/v1?label=Languages&message=2&color=d92e2e&labelColor=4f4f4f">
+  <img alt="Angola API" src="https://img.shields.io/static/v1?label=Angola%20API&message=V1&color=8257E5&labelColor=000000">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
-
 
 <div align="center">
   <p align="center">

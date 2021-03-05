@@ -235,7 +235,7 @@ Retorna a cotação do dolar e euro nos principais bancos comerciais do país.
 Retorna o nome do banco, os dias e as taxas de juros de para depósitos a prazo efetuado pelos mesmos
 
 
-**GET** `https://angolaapi.herokuapp.com/api/v1/banks/interest/term-deposit`
+**GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/term-deposit`
 
 ##### Exemplo da consulta
 ```json

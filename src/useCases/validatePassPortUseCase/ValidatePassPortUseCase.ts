@@ -11,6 +11,6 @@ export class ValidatePassPortUseCase implements IvalidatePassPortUseCase {
     if (!this.validatePassport.validate(passport))
       throw new Error('Invalid passport number');
 
-    return 'this is an Angola valid passport number';
+    return 'This is an Angola valid passport number';
   }
 }

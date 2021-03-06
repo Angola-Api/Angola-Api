@@ -10,6 +10,6 @@ export class ValidateBiUseCase implements IvalidateBiUseCase {
 
     if (!this.validateBi.validate(bi)) throw new Error('Invalid bi number');
 
-    return 'this is an Angola valid bi number';
+    return 'This is an Angola valid bi number';
   }
 }

@@ -9,7 +9,7 @@ export class ValidatePhoneController {
       if (!request.params['phone'])
         return response.status(400).json({
           message:
-            'missing param error, you need to pass phone number on param',
+            'Missing param error, you need to pass phone number on param',
         });
 
       const { phone } = request.params;
@@ -17,7 +17,7 @@ export class ValidatePhoneController {
       const operator = this.validatePhoneUserCase.execute({ phone });
 
       return response.status(200).json({
-        message: 'this is an Angola valid phone number',
+        message: 'This is an Angola valid phone number',
         operator,
       });
     } catch (error) {

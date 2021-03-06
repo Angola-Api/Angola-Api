@@ -449,7 +449,7 @@ Verifica se número informado é um bilhete de identidade nacional.
 // GET https://angolaapi.herokuapp.com/api/v1/validate/bi/006151112LA041
 // Status: 200
 {
-  "message": "this is an Angola valid bi number"
+  "message": "This is an Angola valid bi number"
 }
 ```
 
@@ -472,7 +472,7 @@ Retorna se o registo informado é aceitavél como identificador de um passaporte
 // GET https://angolaapi.herokuapp.com/api/v1/validate/passport/n1234566
 // Status: 200
 {
-  "message": "this is an Angola valid passport number"
+  "message": "This is an Angola valid passport number"
 }
 ```
 
@@ -497,7 +497,7 @@ Verifica se o número informado é de Angola e a qual operadora pertence.
 // GET https://angolaapi.herokuapp.com/api/v1/validate/phone/+244923445618
 // Status: 200
 {
-  "message": "this is an Angola valid phone number",
+  "message": "This is an Angola valid phone number",
   "operator": "Unitel"
 }
 ```

@@ -47,7 +47,7 @@ Todas as informações acima são extraídas diretamente do site https://www.bna
 Também decidimos disponiblizar endpoints para validar as seguintes informações : 
  <ul>
    <li> Bilhete de identidade</li>
-   <li> Pasaporte </li>
+   <li> Passaporte </li>
    <li> Número de telefone</li>
  </ul>
 Importante realçar que também conseguimos disponiblizar conteúdos como : 

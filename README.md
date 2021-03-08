@@ -521,7 +521,7 @@ Verifica se o número informado é de Angola e a qual operadora pertence.
     - `fixBug` - Consertar bugs no app.
     - `chore` - Ajustes, tais como organização, erro de escrita etc..
 
-        exemplo: git checkout -b method/mini-task-description.	
+        exemplo: `git checkout -b method/mini-task-description`.
  
 3. Faça um Commit com as tuas mudanças (`git commit -am 'mini task description'`)	
 4. Faça um Push para a Branch (`git push origin method/mini-task-description`)	

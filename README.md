@@ -516,10 +516,16 @@ Verifica se o número informado é de Angola e a qual operadora pertence.
 ### Chega de Português rsrsrs, abaixo os passos para contribuir no Angola Api 	
 
 1. Faça um Fork no projecto (https://github.com/Angola-Api/Angola-Api)	
-2. Cria uma branch com a tua feature (`git checkout -b angolaapi/new-feature`)	
-3. Faça um Commit com as tuas mudanças (`git commit -am 'Add new feature'`)	
-4. Faça um Push para a Branch (`git push origin feature/new-feature`)	
-5. Cria uma Pull Request
+2. Cria um branch com um dos métodos abaixo: 
+    - `feature` - Para novas funcionalidades para o app.
+    - `fixBug` - Consertar bugs no app.
+    - `chore` - Ajustes, tais como organização, erro de escrita etc..
+
+        exemplo: git checkout -b method/mini-task-description.	
+ 
+3. Faça um Commit com as tuas mudanças (`git commit -am 'mini task description'`)	
+4. Faça um Push para a Branch (`git push origin method/mini-task-description`)	
+5. Cria uma Pull Request.
 
 # :memo: License
 

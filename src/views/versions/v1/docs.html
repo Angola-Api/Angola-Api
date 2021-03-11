@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Angola Api | DOCS</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+    <link rel="manifest" href="/icons/site.webmanifest" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="/icons/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            position: relative;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            margin-top: 50px;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .path,
+        .base-url {
+            width: 100%;
+            padding: 13px;
+            background-color: black;
+            color: yellow;
+            overflow: auto;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px
+        }
+
+        .base-url {
+            margin: 20px 0;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            overflow: auto;
+        }
+
+        .path {
+            width: 100%;
+        }
+
+        .path .parameter {
+            color: red;
+        }
+
+        .response {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #282A36;
+        }
+
+        pre {
+            color: white;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .get {
+            padding: 10px;
+        }
+
+        .get {
+            padding: 13px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background-color: #0090c0;
+            color: white;
+        }
+
+        .key {
+            color: #66D9EF;
+        }
+
+        .value {
+            color: #F1FA8C;
+        }
+
+        .desc {
+            margin: 5px 0 10px;
+        }
+
+        #navbar-example {
+            max-width: 24% !important;
+            height: 300px;
+            overflow-y: auto;
+            background-color: black;
+        }
+
+        #navbar-example a.nav-link {
+            color: yellow;
+        }
+
+        #navbar-example a.nav-link.active {
+            color: black;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example" data-offset="0">
+    <div class="row no-gutters">
+        <div class="col-3 position-relative d-none d-lg-block">
+            <nav id="navbar-example" class="navbar position-fixed">
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="#item-1">Bancos</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ml-3 my-1" href="#item-1-1">Taxa de juros do BNA</a>
+                        <a class="nav-link ml-3 my-1" href="#item-1-2">Taxa de juros LUIBOR</a>
+                        <a class="nav-link ml-3 my-1" href="#item-1-3">Taxa de inflação</a>
+                        <a class="nav-link ml-3 my-1" href="#item-1-4">Taxas de câmbio do BNA</a>
+                        <a class="nav-link ml-3 my-1" href="#item-1-5">Moedas estrangeiras</a>
+                        <a class="nav-link ml-3 my-1" href="#item-1-6">Taxas de juro dos bancos comerciais para
+                            depósitos a prazo</a>
+                    </nav>
+                    <a class="nav-link" href="#item-2">Províncias</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ml-3 my-1" href="#item-2-1">Província</a>
+                    </nav>
+                    <a class="nav-link" href="#item-3">Municípios</a>
+                    <a class="nav-link" href="#item-4">Validate</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ml-3 my-1" href="#item-4-1">Bilhete de identidade</a>
+                        <a class="nav-link ml-3 my-1" href="#item-4-2">Passaporte</a>
+                        <a class="nav-link ml-3 my-1" href="#item-4-3">Telefone</a>
+                    </nav>
+                </nav>
+            </nav>
+
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+            <div class="container ml-auto">
+                <a href="https://angolaapi.herokuapp.com">
+                    <img src="/icons/logo.png" class="logo" />
+                </a>
+                <p class="mt-5">Base URL</p>
+
+                <p class="base-url h2">https://angolaapi.herokuapp.com/api/v1</p>
+                <div>
+                    <h3 id="item-1" class="mt-5">- Bancos</h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <h4 id="item-1-1" class="title">Taxa de juros do Banco Nacional de Angola</h4>
+                            <p class="desc">Retorna o valor da taxa de juros do BNA.</p>
+
+                            <div class="flex">
+                                <p class="get">GET</p>
+                                <p class="path">/banks/rates/interest/bna</p>
+                            </div>
+
+                            <p class="res">Response</p>
+                            <div class="response">
+                                <pre>
+    {
+        <span class="key">"rate"</span>: <span class="value">"15,5%"</span>
+    }
+                            </pre>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                            <h4 id="item-1-2" class="title mt-5">Taxa de juros LUIBOR</h4>
+                            <p class="desc">Retorna o valor da taxa interbancária de oferta de fundos do mercado de
+                                Luanda.</p>
+
+                            <div class="flex">
+                                <p class="get">GET</p>
+                                <p class="path">/banks/rates/interest/luibor</p>
+                            </div>
+
+                            <p class="res">Response</p>
+                            <div class="response">
+                                <pre>
+    {
+        <span class="key">"date"</span>: <span class="value">"10 de Setembro de 2020"</span>,
+        <span class="key">"rates"</span>: [
+            {
+                <span class="key">"maturity"</span>: <span class="value">"Overnight"</span>,
+                <span class="key">"rate"</span>: <span class="value">"5,38%"</span>
+            },
+            {
+                <span class="key">"maturity"</span>: <span class="value">"3 Meses"</span>,
+                <span class="key">"rate"</span>: <span class="value">"12,35%"</span>
+            },
+            {
+                <span class="key">"maturity"</span>: <span class="value">"12 Meses"</span>,
+                <span class="key">"rate"</span>: <span class="value">"16,14%"</span>
+            }
+        ]
+    }
+                            </pre>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h4 id="item-1-3" class="title mt-5">Taxa de inflação</h4>
+                            <p class="desc">Retorna o valor da taxa de inflação do Banco Nacional de Angola.</p>
+
+                            <div class="flex">
+                                <p class="get">GET</p>
+                                <p class="path">/banks/rates/inflation</p>
+                            </div>
+
+                            <p class="res">Response</p>
+                            <div class="response">
+                                <pre>
+    {
+        <span class="key">"date"</span>: <span class="value">"14 de Fevereiro de 2021"</span>,
+        <span class="key">"status"</span>: <span class="value">"Dados referentes ao mês de Janeiro de 2021"</span>,
+        <span class="key">"rates"</span>: [
+            {
+                <span class="key">"type"</span>: <span class="value">"Inflação Mensal"</span>,
+                <span class="key">"rate"</span>: <span class="value">"1,50%"</span>
+            },
+            {
+                <span class="key">"type"</span>: <span class="value">"Inflação Acumulada"</span>,
+                <span class="key">"rate"</span>: <span class="value">"1,50%"</span>
+            },
+            {
+                <span class="key">"type"</span>: <span class="value">"Inflação Homóloga"</span>,
+                <span class="key">"rate"</span>: <span class="value">"24,41%"</span>
+            }
+        ]
+    }
+                            </pre>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h4 id="item-1-4" class="title mt-5">Taxas de câmbio do Banco Nacional de Angola</h4>
+                            <p class="desc">Retorna as taxas de câmbio mais importantes do BNA.</p>
+
+                            <div class="flex">
+                                <p class="get">GET</p>
+                                <p class="path">/banks/rates/exchange</p>
+                            </div>
+
+                            <p class="res">Response</p>
+                            <div class="response">
+                                <pre>
+    {
+        <span class="key">"rates"</span>: [
+            {
+                <span class="key">"currency"</span>: <span class="value">"USD"</span>,
+                <span class="key">"rate"</span>: <span class="value">635.762</span>
+            },
+            {
+                <span class="key">"currency"</span>: <span class="value">"EUR"</span>,
+                <span class="key">"rate"</span>: <span class="value">773.722</span>
+            },
+            {
+                <span class="key">"currency"</span>: <span class="value">"ZAR"</span>,
+                <span class="key">"rate"</span>: <span class="value">44.132</span>
+            }
+        ]
+    }
+                            </pre>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h4 id="item-1-5" class="title mt-5">Venda, compra, e taxa de variação das duas moedas
+                                estrangeiras mais
+                                populares de
+                                Angola</h4>
+                            <p class="desc">Retorna a cotação do dolar e euro nos principais bancos comerciais do
+                                país.
+                            </p>
+
+                            <div class="flex">
+                                <p class="get">GET</p>
+                                <p class="path">/banks/rates/comercial-exchange</p>
+                            </div>
+
+                            <p class="res">Response</p>
+                            <div class="response">
+                                <pre>
+    {
+        <span class="key">"date"</span>: <span class="value">"25 de Fevereiro de 2021"</span>,
+        <span class="key">"banks"</span>: [
+            {
+                <span class="key">"name"</span>: <span class="value">"Banco de Investimento Rural - (BIR)"</span>,
+                <span class="key">"current"</span>: {
+                    <span class="key">"buy"</span>: [
+                        {
+                            <span class="key">"currency"</span>: <span class="value">"USD/AOA"</span>,
+                            <span class="key">"quotation"</span>: <span class="value">572</span>
+                        },
+                        {
+                            <span class="key">"currency"</span>: <span class="value">"EUR/AOA"</span>,
+                            <span class="key">"quotation"</span>: <span class="value">712.07</span>
+                        }
+                    ],
+                    <span class="key">"sell"</span>: [
+                        {
+                            <span class="key">"currency"</span>: <span class="value">"USD/AOA"</span>,
+                            <span class="key">"quotation"</span>: <span class="value">699</span>
+                        },
+                        {
+                            <span class="key">"currency"</span>: <span class="value">"EUR/AOA"</span>,
+                            <span class="key">"quotation"</span>: <span class="value">854.55</span>
+                        }
+                    ]
+                },
+                <span class="key">"lastDay"</span>: {
+                    <span class="key">"buy"</span>: [
+                        {
+                            <span class="key">"currency"</span>: <span class="value">"USD/AOA"</span>,
+                            <span class="key">"quotation"</span>: <span class="value">595</span>
+                        },
+                        {
+                            <span class="key">"currency"</span>: <span class="value">"EUR/AOA"</span>,
+                            <span class="key">"quotation"</span>: <span class="value">715.31</span>
+                        }
+                    ],
+                    <span class="key">"sell"</span>: [
+                        {
+                            <span class="key">"currency"</span>: <span class="value">"USD/AOA"</span>,
+                            <span class="key">"quotation"</span>: <span class="value">698</span>
+                        },
+                        {
+                            <span class="key">"currency"</span>: <span class="value">"EUR/AOA"</span>,
+                            <span class="key">"quotation"</span>: <span class="value">854.55</span>
+                        }
+                    ]
+                },
+                <span class="key">"variation"</span>: {
+                    <span class="key">"buy"</span>: [
+                        {
+                            <span class="key">"currency"</span>: <span class="value">"USD/AOA"</span>,
+                            <span class="key">"variation"</span>: <span class="value">"4,02%"</span>
+                        },
+                        {
+                            <span class="key">"currency"</span>: <span class="value">"EUR/AOA"</span>,
+                            <span class="key">"variation"</span>: <span class="value">"0,46%"</span>
+                        }
+                    ],
+                    <span class="key">"sell"</span>: [
+                        {
+                            <span class="key">"currency"</span>: <span class="value">"USD/AOA"</span>,
+                            <span class="key">"variation"</span>: <span class="value">"-0,14%"</span>
+                        },
+                        {
+                            <span class="key">"currency"</span>: <span class="value">"EUR/AOA"</span>,
+                            <span class="key">"variation"</span>: <span class="value">"0,00%"</span>
+                        }
+                    ]
+                }
+            },
+        ...
+        ]
+    }
+                            </pre>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12">
+                            <h4 id="item-1-6" class="title mt-5">Taxas de juro dos bancos comerciais para depósitos
+                                a
+                                prazo
+                            </h4>
+                            <p class="desc">Retorna o nome do banco, os dias e as taxas de juros de para depósitos a
+                                prazo
+                                efetuado
+                                pelos mesmos</p>
+
+                            <div class="flex">
+                                <p class="get">GET</p>
+                                <p class="path">/banks/rates/interest/term-deposit</p>
+                            </div>
+
+                            <p class="res">Response</p>
+                            <div class="response">
+                                <pre>
+    {
+        <span class="key">"date"</span>: <span class="value">"25 de Fevereiro de 2021"</span>,
+        <span class="key">"banks"</span>: [
+            {
+                <span class="key">"name"</span>: <span class="value">"Banco Millenium Atlântico - (ATL)"</span>,
+                <span class="key">"rates"</span>: [
+                    {
+                        <span class="key">"days"</span>: <span class="value">30</span>,
+                        <span class="key">"rate"</span>: <span class="value">"3,50%"</span>
+                    },
+                    {
+                        <span class="key">"days"</span>: <span class="value">90</span>,
+                        <span class="key">"rate"</span>: <span class="value">"5,00%"</span>
+                    },
+                    {
+                        <span class="key">"days"</span>: <span class="value">360</span>,
+                        <span class="key">"rate"</span>: <span class="value">"7,00%"</span>
+                    }
+                ]
+            },
+            {
+                <span class="key">"name"</span>: <span class="value">"Banco Angolano de Investimentos - (BAI)"</span>,
+                <span class="key">"rates"</span>: [
+                    {
+                        <span class="key">"days"</span>: <span class="value">30</span>,
+                        <span class="key">"rate"</span>: <span class="value">"4,50%"</span>
+                    },
+                    {
+                        <span class="key">"days"</span>: <span class="value">90</span>,
+                        <span class="key">"rate"</span>: <span class="value">"7,00%"</span>
+                    },
+                    {
+                        <span class="key">"days"</span>: <span class="value">360</span>,
+                        <span class="key">"rate"</span>: <span class="value">"11,0%"</span>
+                    }
+                ]
+            },
+            ...
+        ]
+    }
+                            </pre>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h4 id="item-2" class="title mt-5">Províncias</h4>
+                            <p class="desc">Retorna a lista de províncias do território nacional.</p>
+
+                            <div class="flex">
+                                <p class="get">GET</p>
+                                <p class="path">/geography/provinces</p>
+                            </div>
+
+                            <p class="res">Response</p>
+                            <div class="response">
+                                <pre>
+    [
+        {
+            <span class="key">"id"</span>: <span class="value">"6032c083c5686966bcc04202"</span>,
+            <span class="key">"nome"</span>: <span class="value">"Bengo"</span>,
+            <span class="key">"codigo"</span>: <span class="value">"BGO"</span>,
+            <span class="key">"capital"</span>: <span class="value">"Caxito"</span>,
+            <span class="key">"area"</span>: <span class="value">15506</span>,
+            <span class="key">"populacao"</span>: <span class="value">356641</span>,
+            <span class="key">"municipios"</span>: <span class="value">6</span>,
+            <span class="key">"comunas"</span>: <span class="value">23</span>
+        },
+        {
+            <span class="key">"id"</span>: <span class="value">"6032c083c5686966bcc04203"</span>,
+            <span class="key">"nome"</span>: <span class="value">"Benguela"</span>,
+            <span class="key">"codigo"</span>: <span class="value">"BGU"</span>,
+            <span class="key">"capital"</span>: <span class="value">"Benguela"</span>,
+            <span class="key">"area"</span>: <span class="value">31788</span>,
+            <span class="key">"populacao"</span>: <span class="value">2231385</span>,
+            <span class="key">"municipios"</span>: <span class="value">10</span>,
+            <span class="key">"comunas"</span>: <span class="value">38</span>
+        },
+        {
+            <span class="key">"id"</span>: <span class="value">"6032c083c5686966bcc04204"</span>,
+            <span class="key">"nome"</span>: <span class="value">"Bié"</span>,
+            <span class="key">"codigo"</span>: <span class="value">"BIE"</span>,
+            <span class="key">"capital"</span>: <span class="value">"Cuíto"</span>,
+            <span class="key">"area"</span>: <span class="value">70314</span>,
+            <span class="key">"populacao"</span>: <span class="value">1455255</span>,
+            <span class="key">"municipios"</span>: <span class="value">9</span>,
+            <span class="key">"comunas"</span>: <span class="value">39</span>
+        },
+        ...
+    ]
+                            </pre>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h4 id="item-2-1" class="title mt-5">Província</h4>
+                            <p class="desc">
+                                Retorna uma das províncias do território nacional de acordo com o ID informado.
+                            </p>
+
+                            <div class="flex">
+                                <p class="get">GET</p>
+                                <p class="path">/geography/provinces/<span class="parameter">{id}</span></p>
+                            </div>
+
+                            <p class="res">Response</p>
+                            <div class="response">
+                                <pre>
+    {
+        <span class="key">"id"</span>: <span class="value">"6032c083c5686966bcc04210"</span>,
+        <span class="key">"nome"</span>: <span class="value">"Moxico"</span>,
+        <span class="key">"codigo"</span>: <span class="value">"MOX"</span>,
+        <span class="key">"capital"</span>: <span class="value">"Luena"</span>,
+        <span class="key">"area"</span>: <span class="value">223023</span>,
+        <span class="key">"populacao"</span>: <span class="value">758568</span>,
+        <span class="key">"municipios"</span>: <span class="value">9</span>,
+        <span class="key">"comunas"</span>: <span class="value">27</span>
+    }
+                            </pre>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h4 id="item-3" class="title mt-5">Munícipios</h4>
+                            <p class="desc">Busca pelos munícipios de uma determinada província</p>
+
+                            <div class="flex">
+                                <p class="get">GET</p>
+                                <p class="path">/geography/county?provincia=<span class="parameter">{provincia}</span>
+                                </p>
+                            </div>
+
+
+                            <p class="res">Response</p>
+                            <div class="response">
+                                <pre>
+    [
+        {
+            <span class="key">"id"</span>: <span class="value">"6032c086c5686966bcc04270"</span>,
+            <span class="key">"descricao"</span>: <span class="value">""</span>,
+            <span class="key">"nome"</span>: <span class="value">"Belas"</span>,
+            <span class="key">"provincia"</span>: <span class="value">"Luanda"</span>
+        },
+        {
+            <span class="key">"id"</span>: <span class="value">"6032c086c5686966bcc04271"</span>,
+            <span class="key">"descricao"</span>: <span class="value">""</span>,
+            <span class="key">"nome"</span>: <span class="value">"Cacuaco"</span>,
+            <span class="key">"provincia"</span>: <span class="value">"Luanda"</span>
+        }
+    ]
+                            </pre>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-5">
+                            <h3 id="item-4">- Validate</h3>
+
+                            <h4 id="item-4-1" class="title">Bilhete de identidade</h4>
+                            <p class="desc">Verifica se número informado é um bilhete de identidade nacional.</p>
+
+                            <div class="flex">
+                                <p class="get">GET</p>
+                                <p class="path">/validate/bi/<span class="parameter">{bi}</span>
+                                </p>
+                            </div>
+
+                            <p class="res">Response Successful</p>
+                            <div class="response mb-3">
+                                <pre>
+    {
+        <span class="key">"message"</span>: <span class="value">"This is an Angola valid bi number"</span>
+    }
+                                </pre>
+                            </div>
+
+                            <p class="res">Response Failure</p>
+                            <div class="response">
+                                <pre>
+    // Status: 400
+    {
+        <span class="key">"message"</span>: <span class="value">"Invalid bi number"</span>
+    }
+                                </pre>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <h4 id="item-4-2" class="title mt-5">Passaporte</h4>
+                            <p class="desc">Retorna se o registo informado é aceitavél como identificador de um
+                                passaporte angolano.</p>
+
+                            <div class="flex">
+                                <p class="get">GET</p>
+                                <p class="path">/validate/passport/<span class="parameter">{passport}</span>
+                                </p>
+                            </div>
+
+                            <p class="res">Response Successful</p>
+                            <div class="response mb-3">
+                                <pre>
+    {
+        <span class="key">"message"</span>: <span class="value">"This is an Angola valid passport number"</span>
+    }
+                                </pre>
+                            </div>
+
+                            <p class="res">Response Failure</p>
+                            <div class="response">
+                                <pre>
+    // Status: 400
+    {
+        <span class="key">"message"</span>: <span class="value">"Invalid passport number"</span>
+    }
+                                </pre>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h4 id="item-4-3" class="title mt-5">Telefone</h4>
+                            <p class="desc">Verifica se o número informado é de Angola e a qual operadora pertence.
+                            </p>
+
+                            <div class="flex">
+                                <p class="get">GET</p>
+                                <p class="path">/validate/phone/<span class="parameter">{phone}</span>
+                                </p>
+                            </div>
+
+                            <p class="res">Response Successful</p>
+                            <div class="response mb-3">
+                                <pre>
+    {
+        <span class="key">"message"</span>: <span class="value">"This is an Angola valid phone number"</span>,
+        <span class="key">"operator"</span>: <span class="value">"Unitel"</span>
+    }
+                                </pre>
+                            </div>
+
+                            <p class="res">Response Failure</p>
+                            <div class="response">
+                                <pre>
+    // Status: 400
+    {
+        <span class="key">"message"</span>: <span class="value">"Invalid phone number"</span>
+    }
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between p-5">
+                <p>&copy; 2021 - AngolaAPI</p>
+                <p>Docs: Version 1.0</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+            'use strict'
+
+            let height = $(window).height()
+
+            $(window).on('resize', function () {
+                height = $(this).height()
+
+                $('#navbar-example').height(height)
+            })
+
+            $('#navbar-example').height(height)
+
+            $('.nav-link').on('click', function (e) {
+                e.preventDefault()
+
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 700)
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -12,7 +12,7 @@ async function start() {
     setUpRoutes(app);
 
     app.listen(environment.port, () => {
-      console.log('server listening on port:5000');
+      console.log(`server running on http://localhost:${environment.port}`);
     });
   } catch (error) {
     console.error(error);

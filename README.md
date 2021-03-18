@@ -30,11 +30,11 @@
 
 ## :bulb: Sobre o projecto
 
- Imagina um país com 1.246.700 km² com cerca de 30 milhões de habitantes distribuído em 18 províncias, mas não possui uma API pública para consulta de diversas informações sobre finanças, geografia ou validação de dados. Pois é, um grande problema.
+Imagina um país com 1.246.700 km² com cerca de 30 milhões de habitantes distribuído em 18 províncias, mas não possui uma API pública para consulta de diversas informações sobre finanças, geografia ou validação de dados. Pois é, um grande problema.
 
- Face a esse problema nos inspiramos na organização brasileira chamada [Brasil Api](https://github.com/BrasilAPI/BrasilAPI/) e decidimos reunir o maior número de informações necessária sobre Angola e distribuir de forma gratuita.
+Face a esse problema nos inspiramos na organização brasileira chamada [Brasil Api](https://github.com/BrasilAPI/BrasilAPI/) e decidimos reunir o maior número de informações necessária sobre Angola e distribuir de forma gratuita.
 
- Nós conseguimos distribuir algumas informações bancarias como :
+Nós conseguimos distribuir algumas informações bancarias como :
 <ul>
   <li> Taxa de juro do BNA</li>
   <li> Taxa de juro Luibor (Taxa Interbancária de Oferta de Fundos do Mercado de Luanda)</li>
@@ -538,10 +538,10 @@ Verifica se o número informado é de Angola e a qual operadora pertence.
 
 ### Chega de Português rsrsrs, abaixo os passos para contribuir no Angola Api  
 
-1. Faça um Fork no projecto (<https://github.com/Angola-Api/Angola-Api>) 
-2. Cria uma branch com a tua feature (`git checkout -b angolaapi/new-feature`) 
-3. Faça um Commit com as tuas mudanças (`git commit -am 'Add new feature'`) 
-4. Faça um Push para a Branch (`git push origin feature/new-feature`) 
+1. Faça um Fork no projecto (<https://github.com/Angola-Api/Angola-Api>)
+2. Cria uma branch com a tua feature (`git checkout -b angolaapi/new-feature`)
+3. Faça um Commit com as tuas mudanças (`git commit -am 'Add new feature'`)
+4. Faça um Push para a Branch (`git push origin feature/new-feature`)
 5. Cria uma Pull Request
 
 ## :memo: License
@@ -556,4 +556,4 @@ Este projeto está sob a licença do MIT. Acessa: (<https://opensource.org/licen
 ## :bust_in_silhouette: Autores
 
 | [<img src="https://github.com/luteroelavoco.png?size=115" width=115><br><sub>@luteroelavoco</sub>](https://github.com/luteroelavoco) | [<img src="https://github.com/adilsonfuxe.png?size=115" width=115><br><sub>@adilsonfuxe</sub>](https://github.com/adilsonfuxe) |
-| :---: | :---: |
+| :---: | :---: | :---: |

@@ -550,10 +550,11 @@ Este projeto está sob a licença do MIT. Acessa: (<https://opensource.org/licen
 
 ## :busts_in_silhouette: Colaboradores
 
-| [<img src="https://github.com/carlcr.png?size=115" width=115><br><sub>@carlcr</sub>](https://github.com/carlcr) |
-| :---: |
+| [<img src="https://github.com/carlcr.png?size=115" width=115><br><sub>@carlcr</sub>](https://github.com/carlcr) | [<img src="https://github.com/alexxfreitag.png?size=115" width=115><br><sub>@alexxfreitag</sub>](https://github.com/alexxfreitag) |
+| :---: | :---: |
+| [<img src="https://github.com/ViniciusCarvalhoDev.png?size=115" width=115><br><sub>@ViniciusCarvalhoDev</sub>](https://github.com/ViniciusCarvalhoDev) | [<img src="https://github.com/Nurul-GC.png?size=115" width=115><br><sub>@Nurul-GC</sub>](https://github.com/Nurul-GC) |
 
 ## :bust_in_silhouette: Autores
 
 | [<img src="https://github.com/luteroelavoco.png?size=115" width=115><br><sub>@luteroelavoco</sub>](https://github.com/luteroelavoco) | [<img src="https://github.com/adilsonfuxe.png?size=115" width=115><br><sub>@adilsonfuxe</sub>](https://github.com/adilsonfuxe) |
-| :---: | :---: | :---: |
+| :---: | :---: |

@@ -1,4 +1,5 @@
-<h1 align="center"><img src="./public/logo.png"></h1>
+# <img src="./public/logo.png">
+
 <h1 align="center">
     Angola API
 </h1>
@@ -15,9 +16,9 @@
     <br/>
     <label> Que tal pegarmos a ideia do Brasil API e levarmos em Angola?</label>
   </p>
- </div>
- 
- <p align="center">
+</div>
+
+<p align="center">
   <a href="#bulb-sobre-o-projecto">Sobre o Projecto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#hammer_and_wrench-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#link-endpoints">Endpoints</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -27,10 +28,11 @@
   <a href="#bust_in_silhouette-autores">Autores</a>
 </p>
 
- # :bulb: Sobre o projecto
- Imagina um país com 1.246.700 km² com cerca de 30 milhões de habitantes distribuído em 18 províncias, mas não possui uma API pública para consulta de diversas informações sobre finanças, geografia ou validação de dados. Pois é, um grande problema. 
- 
- Face a esse problema nos inspiramos na organização brasileira chamada [Brasil Api](https://github.com/BrasilAPI/BrasilAPI/) e decidimos reunir o maior número de informações necessária sobre Angola e distribuir de forma gratuita. 
+## :bulb: Sobre o projecto
+
+ Imagina um país com 1.246.700 km² com cerca de 30 milhões de habitantes distribuído em 18 províncias, mas não possui uma API pública para consulta de diversas informações sobre finanças, geografia ou validação de dados. Pois é, um grande problema.
+
+ Face a esse problema nos inspiramos na organização brasileira chamada [Brasil Api](https://github.com/BrasilAPI/BrasilAPI/) e decidimos reunir o maior número de informações necessária sobre Angola e distribuir de forma gratuita.
 
  Nós conseguimos distribuir algumas informações bancarias como :
 <ul>
@@ -41,23 +43,23 @@
   <li> Taxas de câmbio nos bancos comerciais</li>
   <li> Taxas de juros de bancos comerciais</li>
 </ul>
-Todas as informações acima são extraídas diretamente do site https://www.bna.ao. 
+Todas as informações acima são extraídas diretamente do site https://www.bna.ao.
 <br/>
 <br/>
-Também decidimos disponiblizar endpoints para validar as seguintes informações : 
+Também decidimos disponiblizar endpoints para validar as seguintes informações :
  <ul>
    <li> Bilhete de identidade</li>
    <li> Passaporte </li>
    <li> Número de telefone</li>
  </ul>
-Importante realçar que também conseguimos disponiblizar conteúdos como : 
+Importante realçar que também conseguimos disponiblizar conteúdos como :
  <ul>
    <li> Lista de provincias de Angola</li>
    <li> Lista de munícipios de uma província </li>
    <li> Lista de distritos de um munícipio</li>
  </ul>
- 
-# :hammer_and_wrench: Tecnologias
+
+## :hammer_and_wrench: Tecnologias
 
 Este projecto foi construído usando as seguintes tecnologias:
 
@@ -65,19 +67,18 @@ Este projecto foi construído usando as seguintes tecnologias:
 - [TypeScript](https://www.typescriptlang.org/)
 
 ## :link: Endpoints
+
 Embaixo segue a lista e descrição de endpoints implementados nesse projecto.
 OBS: SSL está desabilitado nos endpoints.
 
+### Taxa de juros do Banco Nacional de Angola
 
-
-
-#### Taxa de juros do Banco Nacional de Angola
 Retorna o valor da taxa de juros do BNA.
-
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/bna`
 
-##### Exemplo da consulta
+#### Exemplo da consulta
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/bna
 
@@ -86,12 +87,14 @@ Retorna o valor da taxa de juros do BNA.
 }
 ```
 
-#### Taxa de juros LUIBOR
+### Taxa de juros LUIBOR
+
 Retorna o valor da taxa interbancária de oferta de fundos do mercado de Luanda.
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/luibor`
 
-##### Exemplo da consulta
+#### Exemplo da consulta
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/luibor
 
@@ -113,12 +116,15 @@ Retorna o valor da taxa interbancária de oferta de fundos do mercado de Luanda.
   ]
 }
 ```
-#### Taxa de inflação
+
+### Taxa de inflação
+
 Retorna o valor da taxa de inflação do Banco Nacional de Angola.
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/inflation`
 
-##### Exemplo da consulta
+#### Exemplo da consulta
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/banks/rates/inflation
 
@@ -142,14 +148,14 @@ Retorna o valor da taxa de inflação do Banco Nacional de Angola.
 }
 ```
 
+### Taxas de câmbio do Banco Nacional de Angola
 
-#### Taxas de câmbio do Banco Nacional de Angola
 Retorna as taxas de câmbio mais importantes do BNA.
-
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/exchange`
 
-##### Exemplo da consulta
+#### Exemplo da consulta
+
 ```json
 // GET https://angola-api.com/api/v1/banks/rates/exchange
 
@@ -171,13 +177,14 @@ Retorna as taxas de câmbio mais importantes do BNA.
 }
 ```
 
-#### Venda, compra, e taxa de variação das duas moedas estrangeiras mais populares de Angola
-Retorna a cotação do dolar e euro nos principais bancos comerciais do país.
+### Venda, compra, e taxa de variação das duas moedas estrangeiras mais populares de Angola
 
+Retorna a cotação do dolar e euro nos principais bancos comerciais do país.
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/comercial-exchange`
 
-##### Exemplo da consulta
+#### Exemplo da consulta
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/banks/rates/comercial-exchange
 
@@ -257,13 +264,15 @@ Retorna a cotação do dolar e euro nos principais bancos comerciais do país.
   ]
     
 ```
-#### Taxas de juro dos bancos comerciais para depósitos a prazo
-Retorna o nome do banco, os dias e as taxas de juros de para depósitos a prazo efetuado pelos mesmos
 
+### Taxas de juro dos bancos comerciais para depósitos a prazo
+
+Retorna o nome do banco, os dias e as taxas de juros de para depósitos a prazo efetuado pelos mesmos
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/term-deposit`
 
-##### Exemplo da consulta
+#### Exemplo da consulta
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/term-deposit
 
@@ -308,14 +317,16 @@ Retorna o nome do banco, os dias e as taxas de juros de para depósitos a prazo 
   ]
 ```
 
-### Geography 
+### Geography
 
 #### Províncias
+
 Retorna a lista de províncias do território nacional ou apenas uma província se o ID for informado.
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/geography/provinces`
 
 ##### Exemplo da consulta
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/geography/provinces
 
@@ -357,6 +368,7 @@ Retorna a lista de províncias do território nacional ou apenas uma província 
 **GET** `https://angolaapi.herokuapp.com/api/v1/geography/provinces/`**[id]**
 
 ##### Exemplo da consulta
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/geography/provinces/6032c083c5686966bcc04210
 
@@ -371,12 +383,15 @@ Retorna a lista de províncias do território nacional ou apenas uma província 
   "comunas": 27
 }
 ```
+
 #### Munícipios
+
 Busca pelos munícipios de uma determinada província
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/geography/county?provincia=`**[provincia]**
 
 ##### Exemplo da consulta
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/geography/county?provincia=Luanda
 
@@ -437,14 +452,17 @@ Busca pelos munícipios de uma determinada província
   }
 ]
 ```
-### Validate 
+
+### Validate
 
 #### Bilhete de identidade
+
 Verifica se número informado é um bilhete de identidade nacional.
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/validate/bi/`**[bi]**
 
 ##### Consulta com sucesso
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/validate/bi/006151112LA041
 // Status: 200
@@ -453,8 +471,8 @@ Verifica se número informado é um bilhete de identidade nacional.
 }
 ```
 
-
 ##### Consulta com erro
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/validate/bi/006151112LA04A
 // Status: 400
@@ -462,12 +480,15 @@ Verifica se número informado é um bilhete de identidade nacional.
   "message": "Invalid bi number"
 }
 ```
+
 #### Passaporte
+
 Retorna se o registo informado é aceitavél como identificador de um passaporte angolano.
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/validate/passport/`**[passport]**
 
 ##### Consulta com sucesso
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/validate/passport/n1234566
 // Status: 200
@@ -476,8 +497,8 @@ Retorna se o registo informado é aceitavél como identificador de um passaporte
 }
 ```
 
-
 ##### Consulta com erro
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/validate/passport/n12345667
 // Status: 400
@@ -487,12 +508,13 @@ Retorna se o registo informado é aceitavél como identificador de um passaporte
 ```
 
 #### Telefone
+
 Verifica se o número informado é de Angola e a qual operadora pertence.
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/validate/phone/`**[phone]**
 
-
 ##### Consulta com sucesso
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/validate/phone/+244923445618
 // Status: 200
@@ -502,8 +524,8 @@ Verifica se o número informado é de Angola e a qual operadora pertence.
 }
 ```
 
-
 ##### Consulta com erro
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/validate/phone/+8599562562
 // Status: 400
@@ -511,26 +533,27 @@ Verifica se o número informado é de Angola e a qual operadora pertence.
   "message": "Invalid phone number"
 }
 ```
-# :open_hands: Como contribuir
 
-### Chega de Português rsrsrs, abaixo os passos para contribuir no Angola Api 	
+## :open_hands: Como contribuir
 
-1. Faça um Fork no projecto (https://github.com/Angola-Api/Angola-Api)	
-2. Cria uma branch com a tua feature (`git checkout -b angolaapi/new-feature`)	
-3. Faça um Commit com as tuas mudanças (`git commit -am 'Add new feature'`)	
-4. Faça um Push para a Branch (`git push origin feature/new-feature`)	
+### Chega de Português rsrsrs, abaixo os passos para contribuir no Angola Api  
+
+1. Faça um Fork no projecto (<https://github.com/Angola-Api/Angola-Api>) 
+2. Cria uma branch com a tua feature (`git checkout -b angolaapi/new-feature`) 
+3. Faça um Commit com as tuas mudanças (`git commit -am 'Add new feature'`) 
+4. Faça um Push para a Branch (`git push origin feature/new-feature`) 
 5. Cria uma Pull Request
 
-# :memo: License
+## :memo: License
 
-Este projeto está sob a licença do MIT. Acessa: (https://opensource.org/licenses/MIT) para mais detalhes.
+Este projeto está sob a licença do MIT. Acessa: (<https://opensource.org/licenses/MIT>) para mais detalhes.
 
-# :busts_in_silhouette: Colaboradores
+## :busts_in_silhouette: Colaboradores
 
 | [<img src="https://github.com/carlcr.png?size=115" width=115><br><sub>@carlcr</sub>](https://github.com/carlcr) |
 | :---: |
 
-# :bust_in_silhouette: Autores
+## :bust_in_silhouette: Autores
 
 | [<img src="https://github.com/luteroelavoco.png?size=115" width=115><br><sub>@luteroelavoco</sub>](https://github.com/luteroelavoco) | [<img src="https://github.com/adilsonfuxe.png?size=115" width=115><br><sub>@adilsonfuxe</sub>](https://github.com/adilsonfuxe) |
 | :---: | :---: |

@@ -1,4 +1,4 @@
-# <img src="./public/logo.png">
+# <img alt="logo-angolapi" src="../public/logo.png">
 
 <h1 align="center">
     Angola API

@@ -1,7 +1,7 @@
 import { INavigator } from "../INavigator";
 
-export class RateTermDepositNavigator implements INavigator {
-  constructor() {}
+class RateTermDepositNavigator implements INavigator {
+  constructor() { }
   navigator() {
     const nodeSelectData = document.getElementsByClassName("BNA-data");
     const nodeSelectArrayRates = document.querySelectorAll(
@@ -41,3 +41,5 @@ export class RateTermDepositNavigator implements INavigator {
     };
   }
 }
+
+export default RateTermDepositNavigator;

@@ -4,6 +4,7 @@ export const MongoHelper = {
   client: null as Mongoose,
   uri: null as string,
   async connect(uri: string): Promise<void> {
+    console.log({ uri })
     this.uri = uri;
     this.client = await mongoose.connect(uri, {
       useNewUrlParser: true,

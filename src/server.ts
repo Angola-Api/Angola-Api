@@ -1,8 +1,8 @@
 import setUpRoutes from '@config/router';
 import express from 'express';
-
-import { MongoHelper } from './databse/helpers';
 import { environment } from './config/environment';
+import { MongoHelper } from './databse/helpers';
+
 
 async function start() {
   try {
@@ -15,7 +15,7 @@ async function start() {
       console.log('server listening on port:5000');
     });
   } catch (error) {
-    console.error(error);
+    throw new Error(`Unable to connect to the server${error}`);
   }
 }
 

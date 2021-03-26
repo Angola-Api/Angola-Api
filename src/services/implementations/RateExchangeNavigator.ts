@@ -1,10 +1,10 @@
-import {INavigator} from '../INavigator'
+import { INavigator } from '../INavigator';
 
-export class RateExchangeNavigator implements INavigator {
-  constructor(){
-    
+class RateExchangeNavigator implements INavigator {
+  constructor() {
+
   }
-   navigator() {
+  navigator() {
     const nodeSelectArrayRates = document.querySelectorAll(
       "div#collapsecambios.collapse table tbody"
     );
@@ -13,11 +13,13 @@ export class RateExchangeNavigator implements INavigator {
 
     let rates = [].slice.call(nodeArrayTable[0].children).map((children) => ({
       currency: (children.children[0] as HTMLElement)?.innerText,
-      rate: parseFloat((children.children[1] as HTMLElement)?.innerText.replace(",",".")),
+      rate: parseFloat((children.children[1] as HTMLElement)?.innerText.replace(",", ".")),
     }));
     rates.shift();
     return {
       rates
     };
   }
-} 
+}
+
+export default RateExchangeNavigator;

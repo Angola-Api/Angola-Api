@@ -5,7 +5,7 @@ const chromeOptions = {
   args: ["--no-sandbox"],
 };
 
-export class Puppeteer {
+class Puppeteer {
   public browser: any;
   public page: any;
   public url: string;
@@ -36,3 +36,5 @@ export class Puppeteer {
     return navigationResult;
   }
 }
+
+export default Puppeteer;

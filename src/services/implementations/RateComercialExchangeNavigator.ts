@@ -1,7 +1,7 @@
 import { INavigator } from "../INavigator";
 
-export class RateComercialExchangeNavigator implements INavigator {
-  constructor() {}
+class RateCommercialExchangeNavigator implements INavigator {
+  constructor() { }
   navigator() {
     const nodeSelectData = document.getElementsByClassName("BNA-data");
     const nodeSelectArrayRates = document.querySelectorAll(
@@ -132,3 +132,5 @@ export class RateComercialExchangeNavigator implements INavigator {
     };
   }
 }
+
+export default RateCommercialExchangeNavigator;

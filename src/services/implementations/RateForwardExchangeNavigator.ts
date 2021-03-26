@@ -1,8 +1,8 @@
-import {INavigator} from '../INavigator'
+import { INavigator } from '../INavigator';
 
-export class RateForwardExchangeNavigator implements INavigator {
-  constructor(){}
-   navigator() {
+class RateForwardExchangeNavigator implements INavigator {
+  constructor() { }
+  navigator() {
     const nodeSelectArrayRates = document.querySelectorAll(
       "div#collapsetaxas.BNA-body-mod.collapse tbody"
     );
@@ -10,7 +10,7 @@ export class RateForwardExchangeNavigator implements INavigator {
     const nodeArrayTable = [...nodeSelectArrayRates];
     let rates = [].slice.call(nodeArrayTable[1].children).map((children) => ({
       maturity: (children.children[0] as HTMLElement)?.innerText,
-      rate: parseFloat((children.children[1] as HTMLElement)?.innerText.replace(",",".")),
+      rate: parseFloat((children.children[1] as HTMLElement)?.innerText.replace(",", ".")),
     }));
     rates.shift();
     rates.pop();
@@ -18,4 +18,6 @@ export class RateForwardExchangeNavigator implements INavigator {
       rates
     };
   }
-} 
+}
+
+export default RateForwardExchangeNavigator;

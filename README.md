@@ -415,9 +415,9 @@ Busca pelos munícipios de uma determinada província
 ### Validate 
 
 #### Bilhete de identidade
-Verifica se número informado é um bilhete de identidade nacional.
+Verifica se o número informado é o número de um bilhete de identidade nacional.
 
-**GET** `https://angolaapi.herokuapp.com/api/v1/validate/bi/`**[bi Number]**
+**GET** `https://angolaapi.herokuapp.com/api/v1/validate/bi/`**[bi number]**
 
 ##### Consulta com sucesso
 ```json
@@ -440,9 +440,9 @@ Verifica se número informado é um bilhete de identidade nacional.
 #### Passaporte
 Retorna se o registo informado é aceitavél como identificador de um passaporte angolano.
 
-**GET** `https://angolaapi.herokuapp.com/api/v1/validate/passport/`**[passport]**
+**GET** `https://angolaapi.herokuapp.com/api/v1/validate/passport/`**[passport number]**
 
-##### Consulta Feita com sucesso
+##### Consulta feita com sucesso
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/validate/passport/n1234566
 // Status: 200
@@ -464,10 +464,10 @@ Retorna se o registo informado é aceitavél como identificador de um passaporte
 #### Telefone
 Verifica se o número informado é de Angola e a qual operadora pertence.
 
-**GET** `https://angolaapi.herokuapp.com/api/v1/validate/phone/`**[phone Number]**
+**GET** `https://angolaapi.herokuapp.com/api/v1/validate/phone/`**[phone number]**
 
 
-##### Consulta Feita com sucesso
+##### Consulta feita com sucesso
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/validate/phone/+244923445618
 // Status: 200
@@ -478,7 +478,7 @@ Verifica se o número informado é de Angola e a qual operadora pertence.
 ```
 
 
-##### Consulta Feita com erro
+##### Consulta feita com erro
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/validate/phone/+8599562562
 // Status: 400

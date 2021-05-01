@@ -238,6 +238,7 @@ Retorna o nome do banco, os dias e as taxas de juros de para depósitos a prazo 
 **GET** `https://angolaapi.herokuapp.com/api/v1/banks/interest/term-deposit`
 
 ##### Exemplo da consulta
+
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/banks/rates/interest/term-deposit
 
@@ -416,7 +417,7 @@ Busca pelos munícipios de uma determinada província
 #### Bilhete de identidade
 Verifica se número informado é um bilhete de identidade nacional.
 
-**GET** `https://angolaapi.herokuapp.com/api/v1/validate/bi/`**[bi]**
+**GET** `https://angolaapi.herokuapp.com/api/v1/validate/bi/`**[bi Number]**
 
 ##### Consulta com sucesso
 ```json
@@ -441,7 +442,7 @@ Retorna se o registo informado é aceitavél como identificador de um passaporte
 
 **GET** `https://angolaapi.herokuapp.com/api/v1/validate/passport/`**[passport]**
 
-##### Consulta com sucesso
+##### Consulta Feita com sucesso
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/validate/passport/n1234566
 // Status: 200
@@ -463,10 +464,10 @@ Retorna se o registo informado é aceitavél como identificador de um passaporte
 #### Telefone
 Verifica se o número informado é de Angola e a qual operadora pertence.
 
-**GET** `https://angolaapi.herokuapp.com/api/v1/validate/phone/`**[phone]**
+**GET** `https://angolaapi.herokuapp.com/api/v1/validate/phone/`**[phone Number]**
 
 
-##### Consulta com sucesso
+##### Consulta Feita com sucesso
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/validate/phone/+244923445618
 // Status: 200
@@ -477,7 +478,7 @@ Verifica se o número informado é de Angola e a qual operadora pertence.
 ```
 
 
-##### Consulta com erro
+##### Consulta Feita com erro
 ```json
 // GET https://angolaapi.herokuapp.com/api/v1/validate/phone/+8599562562
 // Status: 400
@@ -489,11 +490,13 @@ Verifica se o número informado é de Angola e a qual operadora pertence.
 
 ## Chega de Português rsrsrs, abaixo os passos para contribuir no Angola Api 	
 
-1. Fork it (https://github.com/Angola-Api/Angola-Api)	
-2. Create your feature branch (`git checkout -b feature/fooBar`)	
-3. Commit your changes (`git commit -am 'Add some fooBar'`)	
-4. Push to the branch (`git push origin feature/fooBar`)	
-5. Create a new Pull Request
+```bash
+ # Fork it (https://github.com/Angola-Api/Angola-Api)	
+ $ git checkout -b feature/fooBar # Create your feature branch
+ $ git commit -am "Add some fooBar" # Commit your changes
+ $ git push origin feature/fooBar
+ # Create a new Pull Request
+```
 
 ## Autores
 

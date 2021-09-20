@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Olá, muito obrigado! O primeiro erro a gente nunca esquece! Vamos trabalhar com bastante afinco para supera-lo.. | Hello thank you so much! The first mistake we never forget! We will work with great pride to overcome it..'
+        pr-message: 'Olá, muito obrigado! Toda ajuda é muito bem-vinda! Agradeço-te imenso pela contribuição e que se torne um hábito por favor.. | Hello thank you so much! All help is very welcome! I thank you so much for the contribution and that it becomes a habit please..'

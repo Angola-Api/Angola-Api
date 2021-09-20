@@ -1,4 +1,4 @@
-# <img src="./public/logo.png">
+# <img alt="logo-angolapi" src="img/logo.png">
 
 <h1 align="center">
     Angola API
@@ -388,7 +388,7 @@ Retorna a lista de províncias do território nacional ou apenas uma província 
 
 Busca pelos munícipios de uma determinada província
 
-**GET** `https://angolaapi.herokuapp.com/api/v1/geography/county?provincia=`**[municipio]**
+**GET** `https://angolaapi.herokuapp.com/api/v1/geography/county?provincia=`**[provincia]**
 
 ##### Exemplo da consulta
 

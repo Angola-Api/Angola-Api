@@ -1,24 +1,24 @@
 # <img alt="logo-angolapi" src="img/logo.png">
 
-<h1 align="center">
+<h1 style="text-align:center;">
     Angola API
 </h1>
 
-<p align="center">
+<p style="text-align:center;">
   <img alt="Angola API" src="https://img.shields.io/static/v1?label=Languages&message=2&color=d92e2e&labelColor=4f4f4f">
   <img alt="Angola API" src="https://img.shields.io/static/v1?label=Angola%20API&message=V1&color=8257E5&labelColor=000000">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
-<div align="center">
-  <p align="center">
+<div style="text-align:center;">
+  <p style="text-align:center;">
     <strong>Vamos transformar Angola em uma API?</strong>
     <br/>
     <label> Que tal pegarmos a ideia do Brasil API e levarmos em Angola?</label>
   </p>
 </div>
 
-<p align="center">
+<p style="text-align:center;">
   <a href="#bulb-sobre-o-projecto">Sobre o Projecto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#hammer_and_wrench-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#link-endpoints">Endpoints</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

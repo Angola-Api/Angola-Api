@@ -30,9 +30,9 @@
 
 ## :bulb: Sobre o projecto
 
-Imagina um país com 1.246.700 km² com cerca de 30 milhões de habitantes distribuído em 18 províncias, mas não possui uma API pública para consulta de diversas informações sobre finanças, geografia ou validação de dados. Pois é, um grande problema.
+Imagina um país com 1.246.700 km², com cerca de 30 milhões de habitantes distribuídos em 18 províncias, mas que não possui uma API pública para consulta de diversas informações sobre finanças, geografia ou validação de dados. Pois é, um grande problema.
 
-Face a esse problema nos inspiramos na organização brasileira chamada [Brasil Api](https://github.com/BrasilAPI/BrasilAPI/) e decidimos reunir o maior número de informações necessária sobre Angola e distribuir de forma gratuita.
+Face a esse problema, nós nos inspiramos na organização brasileira [Brasil Api](https://github.com/BrasilAPI/BrasilAPI/) e decidimos reunir o maior número de informações necessárias sobre Angola, e distribuir de forma gratuita.
 
 Nós conseguimos distribuir algumas informações bancarias como :
 <ul>

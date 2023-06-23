@@ -1,6 +1,6 @@
 import { IvalidateBi } from '../../lib/ivalidateBi';
-import { IvalidateBIDTO } from './ValidateBiDTO';
 import { IvalidateBiUseCase } from './IvalidateBIUserCase';
+import { IvalidateBIDTO } from './ValidateBiDTO';
 
 export class ValidateBiUseCase implements IvalidateBiUseCase {
   constructor(private validateBi: IvalidateBi) {}
@@ -8,8 +8,8 @@ export class ValidateBiUseCase implements IvalidateBiUseCase {
   execute(data: IvalidateBIDTO): string {
     const { bi } = data;
 
-    if (!this.validateBi.validate(bi)) throw new Error('Invalid bi number');
+    if (!this.validateBi.validate(bi)) throw new Error('Invalid identity card');
 
-    return 'this is an Angola valid bi number';
+    return 'This is an Angola valid identity card';
   }
 }

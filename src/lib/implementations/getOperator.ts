@@ -1,13 +1,23 @@
-import { Operator } from '../../constants';
 import { IgetOperator } from '../IgetOperator';
 
 export class GetOperator implements IgetOperator {
-  getOperator(phone: string): string {
-    const initial = parseInt(phone.substring(4, 6));
-    if (isNaN(initial)) return null;
-    if (initial === 91 || initial === 99) return Operator.Movicel;
-    if (initial > 91 && initial < 95) return Operator.Unitel;
-    if (initial === 95) return Operator.Africell;
-    return null;
+
+  private static readonly MobilePhoneOperators = {
+    "Movicel": [99, 91],
+    "Unitel": [92, 93, 94],
+    "Africell": [95]
+  }
+
+  getOperator(phone: string): string{
+    const prefix = parseInt(phone.substring(4, 6));
+      if (isNaN(prefix)) return null;
+
+      for (const operator in GetOperator.MobilePhoneOperators) {
+        if (GetOperator.MobilePhoneOperators[operator].includes(prefix)) {
+          return operator;
+        }
+      }
+
+      return null;
   }
 }

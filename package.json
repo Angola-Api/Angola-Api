@@ -35,7 +35,7 @@
     "eslint": "^7.19.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.15",
-    "puppeteer": "^20.7.3",
+    "puppeteer": "^7.1.0",
     "ts-jest": "^26.5.1"
   }
 }

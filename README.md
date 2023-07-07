@@ -467,6 +467,7 @@ Verifica se número informado é um bilhete de identidade nacional.
 // GET https://angolaapi.onrender.com/api/v1/validate/bi/006151112LA041
 // Status: 200
 {
+  "success": true,
   "message": "This is an Angola valid bi number"
 }
 ```
@@ -474,9 +475,10 @@ Verifica se número informado é um bilhete de identidade nacional.
 ##### Consulta com erro
 
 ```json
-// GET https://angolaapi.onrender.com/api/v1/validate/bi/006151112LA04A
+// GET https://angolaapi.onrender.com/api/v1/bi/006151112LA04A
 // Status: 400
 {
+  "success": false,
   "message": "Invalid bi number"
 }
 ```

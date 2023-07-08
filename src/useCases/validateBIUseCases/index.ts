@@ -1,8 +1,8 @@
 import { ValidateBi } from '../../lib/implementations';
 import { ValidateBiUseCase } from './ValidateBiUseCase';
 import { ValidateBiController } from './ValidateBiController';
-import { Bi } from 'src/services/implementations/Bi';
-import { AxiosHttp } from 'src/services/implementations/AxiosHttp';
+import { Bi } from '../../services/implementations/Bi';
+import { AxiosHttp } from '../../services/implementations/AxiosHttp';
 
 const validateBI = new ValidateBi();
 

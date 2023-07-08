@@ -1,5 +1,5 @@
-import { IvalidateBIDTO } from './ValidateBiDTO';
+import { DataBIDTO, IvalidateBIDTO } from './ValidateBiDTO';
 
 export interface IvalidateBiUseCase {
-  execute(data: IvalidateBIDTO): string;
+  execute(data: IvalidateBIDTO): Promise<DataBIDTO>;
 }

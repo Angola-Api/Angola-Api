@@ -13,13 +13,12 @@ export class ValidateBiController {
 
       const { bi } = request.params;
 
-      const result = this.validateBiUseCase.execute({ bi });
+      const result = await this.validateBiUseCase.execute({ bi });
 
-      return response.status(200).json({
-        message: result,
-      });
+      return response.status(200).json(result);
     } catch (error) {
       return response.status(400).json({
+        sucess: false,
         message: error.message || 'Unexpected error',
       });
     }

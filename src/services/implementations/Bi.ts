@@ -1,6 +1,6 @@
 import { environment } from "@config/environment";
 import HttpClient from "../HttpClient";
-import { IBi } from "../IBI";
+import { IBi } from "../IBi";
 
 export class Bi implements IBi {
 

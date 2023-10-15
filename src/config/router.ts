@@ -7,12 +7,14 @@ import banksRouter from "../routers/BanksRouter";
 import ValidateBiRouter from "../routers/ValidateBiRouter";
 import ValidatePassPortROuter from "../routers/ValidatePassPortRouter";
 import BanksDataRouter from "src/routers/BanksData";
+import ComemorativeRouter from "src/routers/ComemorativeRouter";
 
 const setUpRoutes = (app: Express): void => {
   app.use(indexRouter());
   app.use("/api/v1", banksRouter());
   app.use("/api/v1/", BanksDataRouter());
-  app.use("/api/v1", ValidateBiRouter());
+  app.use("/api/v1/", ComemorativeRouter());
+  app.use("/api/v1/", ValidateBiRouter());
   app.use("/api/v1/validate", ValidatePassPortROuter());
   app.use("/api/v1/validate", ValidatePhoneRouter());
   app.use("/api/v1/geography", ProvinceRouter());

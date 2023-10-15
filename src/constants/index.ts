@@ -8,4 +8,5 @@ export enum MongooseModel {
   Provincia = "Provincia",
   Muncipio = "Muncipio",
   Banks = "banks",
+  Comemorative = "Comemorative",
 }

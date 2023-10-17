@@ -83,7 +83,7 @@ function mod97($string){
 	return $checksum;
 }
 
-if(isset($_GET['iban'])):
+if(isset($_GET['iban']) && !empty($_GET['iban'])):
 	$iban = strval($_GET['iban']);
 	die(json_encode(getIban($iban)));
 else:

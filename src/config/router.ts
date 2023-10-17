@@ -6,6 +6,7 @@ import MunicipioRouter from '../routers/MunicipioRoutes';
 import banksRouter from '../routers/BanksRouter';
 import ValidateBiRouter from '../routers/ValidateBiRouter';
 import ValidatePassPortROuter from '../routers/ValidatePassPortRouter';
+import ValidateIbanRouter from '../routers/ValidateIbanRouter';
 
 const setUpRoutes = (app: Express): void => {
  
@@ -16,6 +17,7 @@ const setUpRoutes = (app: Express): void => {
   app.use('/api/v1/validate', ValidatePhoneRouter());
   app.use('/api/v1/geography', ProvinceRouter());
   app.use('/api/v1/geography', MunicipioRouter());
+  app.use('/api/v1', ValidateIbanRouter());
 };
 
 export default setUpRoutes;

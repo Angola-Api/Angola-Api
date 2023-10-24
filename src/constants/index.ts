@@ -1,10 +1,12 @@
 export enum Operator {
-  Movicel = 'Movicel',
-  Unitel = 'Unitel',
-  Africell = "Africell"
+  Movicel = "Movicel",
+  Unitel = "Unitel",
+  Africell = "Africell",
 }
 
 export enum MongooseModel {
-  Provincia = 'Provincia',
-  Muncipio = 'Muncipio',
+  Provincia = "Provincia",
+  Muncipio = "Muncipio",
+  Banks = "banks",
+  Comemorative = "Comemorative",
 }

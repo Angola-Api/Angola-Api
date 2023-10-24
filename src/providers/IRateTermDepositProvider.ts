@@ -1,4 +1,4 @@
-import {RateTermDeposit} from '../entities/RateTermDeposit'
+import { RateTermDeposit } from "../entities/RateTermDeposit";
 export interface IRateTermDepositProvider {
-   getRateTermDeposit(): Promise<RateTermDeposit>
+  getRateTermDeposit(): Promise<RateTermDeposit>;
 }

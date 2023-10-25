@@ -1,8 +1,8 @@
+import { GetProvinceController } from './GetProvinceController'
 import { GetProvinceUseCase } from './GetProvinceUseCase';
-import { ProvinceMethods } from '../../../databse/methods/Provincia';
-import { GetProvinceController } from './GetProvinceController';
 
-const getProvinceUseCase = new GetProvinceUseCase(new ProvinceMethods());
-export const getProvinceController = new GetProvinceController(
-  getProvinceUseCase
-);
+const getProvincesUseCase = new GetProvinceUseCase();
+
+const getProvinceController = new GetProvinceController(getProvincesUseCase);
+
+export default getProvinceController;

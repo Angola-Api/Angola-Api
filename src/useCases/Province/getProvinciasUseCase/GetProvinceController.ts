@@ -7,6 +7,7 @@ export class GetProvinceController {
   async handle(request: Request, response: Response): Promise<Response> {
     try {
       const provinces = await this.getProvinceUseCase.execute();
+      
       return response.status(200).json(provinces);
     } catch (error) {
       return response.status(400).json({

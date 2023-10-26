@@ -1,11 +1,9 @@
-import { IGetOneProvinceUSeCase } from './IgetOneProvinceUseCase';
-import { GetOneProvince } from '../../../databse/methods/Provincia/ProvinceProtocols';
-import { Provincia } from '../../../entities/Provincia';
+import { IGetOneProvinceUSeCase } from "./IgetOneProvinceUseCase";
+import { provinces } from "../../../constants/mock/provinces";
+import { IProvincesProps } from "../../../constants/mock/provinces/types";
 
 export class GetOneProvinceUseCase implements IGetOneProvinceUSeCase {
-  constructor(private getOneprovinces: GetOneProvince) {}
-  async execute(id: string): Promise<Provincia> {
-    const provinces = await this.getOneprovinces.getOne(id);
-    return provinces;
+  async execute(id: string): Promise<IProvincesProps> {
+    return provinces.find((province) => province.id === id);
   }
 }

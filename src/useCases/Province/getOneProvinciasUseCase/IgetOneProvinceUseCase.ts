@@ -1,5 +1,5 @@
-import { Provincia } from '../../../entities/Provincia';
+import { IProvincesProps } from "src/constants/mock/provinces/types";
 
 export interface IGetOneProvinceUSeCase {
-  execute(id: string): Promise<Provincia>;
+  execute(id: string): Promise<IProvincesProps>;
 }

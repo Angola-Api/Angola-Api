@@ -1,12 +1,9 @@
-import { IGetProvinceUSeCase } from './IgetProvinceUseCase';
-import { GetAllProvinces } from '../../../databse/methods/Provincia/ProvinceProtocols';
-import { Provincia } from '../../../entities/Provincia';
+import { IGetProvinceUSeCase } from "./IgetProvinceUseCase";
+import { provinces } from "../../../constants/mock/provinces";
+import { IProvincesProps } from "../../../constants/mock/provinces/types";
 
 export class GetProvinceUseCase implements IGetProvinceUSeCase {
-  constructor(private getAllprovinces: GetAllProvinces) {}
-  async execute(): Promise<ReadonlyArray<Provincia>> {
-    const provinces = await this.getAllprovinces.getAll();
-
+  async execute(): Promise<IProvincesProps[]> {
     return provinces;
   }
 }

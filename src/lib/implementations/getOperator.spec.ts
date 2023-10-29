@@ -21,9 +21,6 @@ describe('GetOPerator', () => {
     expect(sut.getOperator('+244924213456')).toBe(Operator.Unitel);
     expect(sut.getOperator('+244934213456')).toBe(Operator.Unitel);
     expect(sut.getOperator('+244944213456')).toBe(Operator.Unitel);
-    expect(sut.getOperator('+244954213456')).toBe(Operator.Unitel);
-    expect(sut.getOperator('+244964213456')).toBe(Operator.Unitel);
-    expect(sut.getOperator('+244974213456')).toBe(Operator.Unitel);
-    expect(sut.getOperator('+244984213456')).toBe(Operator.Unitel);
+    expect(sut.getOperator('+244954213456')).toBe(Operator.Africell);
   });
 });

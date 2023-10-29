@@ -2,10 +2,10 @@ import { ProvinciaModel } from "../../models";
 import {
   GetOneComemorativeDate,
   GetAllComemorativeDates,
-} from "./ComemorativeProtocols";
-import { toComemorativeDateObject } from "./helper";
-import { ComemorativeDates } from "src/entities/Comemorative";
-import ComemorativeModel from "src/databse/models/ComemorativeModel";
+} from "../../../databse/methods/comemorative/ComemorativeProtocols";
+import { toComemorativeDateObject } from "../../../databse/methods/comemorative/helper";
+import { ComemorativeDates } from "../../../entities/Comemorative";
+import ComemorativeModel from "../../../databse/models/ComemorativeModel";
 
 export class ComemorativeMethods
   implements GetAllComemorativeDates, GetOneComemorativeDate

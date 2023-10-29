@@ -6,7 +6,7 @@ import MunicipioRouter from "../routers/MunicipioRoutes";
 import banksRouter from "../routers/BanksRouter";
 import ValidateBiRouter from "../routers/ValidateBiRouter";
 import ValidatePassPortROuter from "../routers/ValidatePassPortRouter";
-import ComemorativeRouter from "src/routers/ComemorativeRouter";
+import ComemorativeRouter from "../routers/ComemorativeRouter";
 import ValidateIbanRouter from '../routers/ValidateIbanRouter';
 
 

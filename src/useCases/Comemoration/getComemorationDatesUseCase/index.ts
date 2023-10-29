@@ -1,6 +1,6 @@
 import { GetComemorationDateUseCase } from "./GetComemorationUseCase";
 import { GetComemorativeDateController } from "./GetComemorationUseCaseController";
-import { ComemorativeMethods } from "src/databse/methods/comemorative";
+import { ComemorativeMethods } from "../../../databse/methods/comemorative";
 
 const getComemorativeUseCase = new GetComemorationDateUseCase(
   new ComemorativeMethods()

@@ -13,13 +13,13 @@ import ValidateIbanRouter from '../routers/ValidateIbanRouter';
 const setUpRoutes = (app: Express): void => {
   app.use(indexRouter());
   app.use("/api/v1", banksRouter());
-  app.use("/api/v1/", ComemorativeRouter());
-  app.use("/api/v1/", ValidateBiRouter());
+  app.use("/api/v1", ComemorativeRouter());
+  app.use("/api/v1/validate", ValidateBiRouter());
   app.use("/api/v1/validate", ValidatePassPortROuter());
   app.use("/api/v1/validate", ValidatePhoneRouter());
+  app.use('/api/v1/validate', ValidateIbanRouter());
   app.use("/api/v1/geography", ProvinceRouter());
   app.use("/api/v1/geography", MunicipioRouter());
-  app.use('/api/v1', ValidateIbanRouter());
 };
 
 export default setUpRoutes;

@@ -475,7 +475,7 @@ Verifica se número informado é um bilhete de identidade nacional.
 ##### Consulta com erro
 
 ```json
-// GET https://angolaapi.onrender.com/api/v1/bi/006151112LA04A
+// GET https://angolaapi.onrender.com/api/v1/validate/bi/006151112LA04A
 // Status: 400
 {
   "success": false,

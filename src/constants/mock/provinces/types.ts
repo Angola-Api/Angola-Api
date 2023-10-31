@@ -1,5 +1,6 @@
 export type IProvincesProps = {
     id: string;
+    normalized: string;
     nome: string;
     fundada: string;
     capital: string;

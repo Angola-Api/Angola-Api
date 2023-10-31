@@ -1,9 +1,13 @@
 import { IGetProvinceUSeCase } from "./IgetProvinceUseCase";
-import { provinces } from "../../../constants/mock/provinces";
 import { IProvincesProps } from "../../../constants/mock/provinces/types";
+import { IProvince } from "../../../services/IProvince";
 
 export class GetProvinceUseCase implements IGetProvinceUSeCase {
-  async execute(): Promise<IProvincesProps[]> {
+  constructor(private provinceService: IProvince){};
+
+  async execute(): Promise<any> {
+    const provinces = await this.provinceService.getProvinces();
+
     return provinces;
   }
 }

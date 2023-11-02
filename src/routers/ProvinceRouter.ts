@@ -14,7 +14,7 @@ const ProvinceRouter = (router = Router()) => {
     return getOneProvinceController.handle(req, res);
   });
 
-  router.get("/provinces/search/country", async (req, res) => {
+  router.get("/provinces/search/counties", async (req, res) => {
     return getOneProvinceByNameController.execute(req, res)
   });
   return router;

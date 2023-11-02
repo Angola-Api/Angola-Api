@@ -11,7 +11,8 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_nodules --no-notify src/server.ts",
     "test": "jest",
     "dev-seed:province": "ts-node-dev src/databse/seed/index.ts",
-    "prod-seed:province": "node dist/databse/seed/index.js"
+    "prod-seed:province": "node dist/databse/seed/index.js",
+    "test:cov": "jest --coverage"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.16",

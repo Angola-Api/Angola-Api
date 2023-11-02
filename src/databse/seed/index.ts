@@ -8,6 +8,8 @@ const seed = async () => {
     `CREATE TABLE IF NOT EXISTS provinces (id TEXT PRIMARY KEY NOT NULL, nome TEXT, fundada TEXT, capital TEXT, area TEXT, prefixo_telefonico TEXT, site_governo_provincial TEXT, municipios TEXT, normalized TEXT)`
   );
 
+  db.run(`CREATE INDEX idx_name ON provinces(normalized)`);
+
   for (const province of provinces) {
     db.run(
       `INSERT INTO provinces (id, nome, fundada, capital, area, prefixo_telefonico, site_governo_provincial, municipios, normalized) VALUES (?,?,?,?,?,?,?,?,?)`,
@@ -24,6 +26,8 @@ const seed = async () => {
       ]
     );
   }
+
+  db.close();
 };
 
 seed();

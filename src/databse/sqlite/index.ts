@@ -1,4 +1,4 @@
-import { environment } from "@config/environment";
+import { environment } from "../../config/environment";
 import path from "path"
 import * as sqlite from "sqlite";
 import sqlite3 from "sqlite3";

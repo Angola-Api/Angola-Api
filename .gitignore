@@ -102,8 +102,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-
-#ignored sqlite db
-
-src/databse/sqlite/storage/*

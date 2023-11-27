@@ -332,14 +332,21 @@ Retorna a lista de províncias do território nacional ou apenas uma província 
 
 [
   {
-    "id": "6032c083c5686966bcc04202",
+    "id": "3da181d3-bee0-4aa0-ab10-d37c78b911f4",
     "nome": "Bengo",
-    "codigo": "BGO",
+    "fundada": "26 de Abril de 1980",
     "capital": "Caxito",
-    "area": 15506,
-    "populacao": 356641,
-    "municipios": 6,
-    "comunas": 23
+    "area": 	"31.371 km²",
+    "prefixo_telefonico":	"034",
+    "site_governo_provincial": 	"https://www.bengo.gov.ao",
+    "municipios": [
+      "Ambriz",
+      "Bula Atumba",
+      "Dande",
+      "Dembos",
+      "Nambuangongo",
+      "Pango Aluquém"
+    ]
   },
   {
     "id": "6032c083c5686966bcc04203",

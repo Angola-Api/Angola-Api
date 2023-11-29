@@ -396,7 +396,7 @@ Retorna a lista de províncias do território nacional ou apenas uma província 
 
 Busca pelos munícipios de uma determinada província
 
-**GET** `https://angolaapi.herokuapp.com/api/v1/geography/county?provincia=`**[provincia]**
+**GET** `https://angolaapi.onrender.com/api/v1/geography/provinces/search/counties?provincia=`**[provincia]**
 
 ##### Exemplo da consulta
 

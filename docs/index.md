@@ -323,12 +323,13 @@ Retorna o nome do banco, os dias e as taxas de juros de para depósitos a prazo 
 
 Retorna a lista de províncias do território nacional ou apenas uma província se o ID for informado.
 
-**GET** `https://angolaapi.herokuapp.com/api/v1/geography/provinces`
+**GET** `https://angolaapi.onrender.com/api/v1/geography/provinces/`
 
 ##### Exemplo da consulta
 
 ```json
-// GET https://angolaapi.herokuapp.com/api/v1/geography/provinces
+
+// GET https://angolaapi.onrender.com/api/v1/geography/provinces/
 
 [
   {

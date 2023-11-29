@@ -350,7 +350,7 @@ Retorna a lista de províncias do território nacional ou apenas uma província 
     ]
   },
   {
-    "id": "6032c083c5686966bcc04203",
+    "id": "34fa1e12-f9b0-4bb7-af44-8c0494d14b4d",
     "nome": "Benguela",
     "codigo": "BGU",
     "capital": "Benguela",
@@ -360,7 +360,7 @@ Retorna a lista de províncias do território nacional ou apenas uma província 
     "comunas": 38
   },
   {
-    "id": "6032c083c5686966bcc04204",
+    "id": "d8e44996-9c68-424a-a896-fedf0afdd2cf",
     "nome": "Bié",
     "codigo": "BIE",
     "capital": "Cuíto",
@@ -373,15 +373,15 @@ Retorna a lista de províncias do território nacional ou apenas uma província 
  ]
 ```
 
-**GET** `https://angolaapi.herokuapp.com/api/v1/geography/provinces/`**[id]**
+**GET** `https://angolaapi.onrender.com/api/v1/geography/provinces/`**[id]**
 
 ##### Exemplo da consulta
 
 ```json
-// GET https://angolaapi.herokuapp.com/api/v1/geography/provinces/6032c083c5686966bcc04210
+// GET https://angolaapi.onrender.com/api/v1/geography/provinces/8c73bc22-93b9-4952-8c7e-72d4e5f5a918
 
 {
-  "id": "6032c083c5686966bcc04210",
+  "id": "8c73bc22-93b9-4952-8c7e-72d4e5f5a918",
   "nome": "Moxico",
   "codigo": "MOX",
   "capital": "Luena",
@@ -401,59 +401,59 @@ Busca pelos munícipios de uma determinada província
 ##### Exemplo da consulta
 
 ```json
-// GET https://angolaapi.herokuapp.com/api/v1/geography/county?provincia=Luanda
+// GET https://angolaapi.onrender.com/api/v1/geography/provinces/search/counties?provincia=Luanda
 
 [
   {
-    "id": "6032c086c5686966bcc04270",
+    "id": "d054ff4d-8c3b-4ff5-a4d5-5a3cd3ed240b",
     "descricao": "",
     "nome": "Belas",
     "provincia": "Luanda"
   },
   {
-    "id": "6032c086c5686966bcc04271",
+    "id": "d054ff4d-8c3b-4ff5-a4d5-5a3cd3ed240b",
     "descricao": "",
     "nome": "Cacuaco",
     "provincia": "Luanda"
   },
   {
-    "id": "6032c086c5686966bcc04272",
+    "id": "d054ff4d-8c3b-4ff5-a4d5-5a3cd3ed240b",
     "descricao": "",
     "nome": "Cazenga",
     "provincia": "Luanda"
   },
   {
-    "id": "6032c086c5686966bcc04273",
+    "id": "d054ff4d-8c3b-4ff5-a4d5-5a3cd3ed240b",
     "descricao": "",
     "nome": "Ícolo e Bengo",
     "provincia": "Luanda"
   },
   {
-    "id": "6032c086c5686966bcc04274",
+    "id": "d054ff4d-8c3b-4ff5-a4d5-5a3cd3ed240b",
     "descricao": "",
     "nome": "Luanda",
     "provincia": "Luanda"
   },
   {
-    "id": "6032c086c5686966bcc04275",
+    "id": "d054ff4d-8c3b-4ff5-a4d5-5a3cd3ed240b",
     "descricao": "",
     "nome": "Quilamba Quiaxi",
     "provincia": "Luanda"
   },
   {
-    "id": "6032c086c5686966bcc04276",
+    "id": "d054ff4d-8c3b-4ff5-a4d5-5a3cd3ed240b",
     "descricao": "",
     "nome": "Quissama",
     "provincia": "Luanda"
   },
   {
-    "id": "6032c086c5686966bcc04277",
+    "id": "d054ff4d-8c3b-4ff5-a4d5-5a3cd3ed240b",
     "descricao": "",
     "nome": "Talatona",
     "provincia": "Luanda"
   },
   {
-    "id": "6032c086c5686966bcc04278",
+    "id": "d054ff4d-8c3b-4ff5-a4d5-5a3cd3ed240b",
     "descricao": "",
     "nome": "Viana",
     "provincia": "Luanda"

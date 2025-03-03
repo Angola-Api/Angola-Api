@@ -14,7 +14,7 @@
   <p align="center">
     <strong>Vamos transformar Angola em uma API?</strong>
     <br/>
-    <label> Que tal pegarmos a ideia do Brasil API e levarmos em Angola?</label>
+    <label> Que tal criarmos uma API pública e gratuita para fornecer dados úteis e estruturados sobre Angola?</label>
   </p>
 </div>
 

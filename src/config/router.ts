@@ -8,6 +8,7 @@ import ValidateBiRouter from "../routers/ValidateBiRouter";
 import ValidatePassPortROuter from "../routers/ValidatePassPortRouter";
 import ComemorativeRouter from "../routers/ComemorativeRouter";
 import ValidateIbanRouter from '../routers/ValidateIbanRouter';
+import NifRouter from "src/routers/NifRouter";
 
 
 const setUpRoutes = (app: Express): void => {
@@ -17,6 +18,7 @@ const setUpRoutes = (app: Express): void => {
   app.use("/api/v1/validate", ValidateBiRouter());
   app.use("/api/v1/validate", ValidatePassPortROuter());
   app.use("/api/v1/validate", ValidatePhoneRouter());
+  app.use("/api/v1/validate", NifRouter());
   app.use('/api/v1/validate', ValidateIbanRouter());
   app.use("/api/v1/geography", ProvinceRouter());
   app.use("/api/v1/geography", MunicipioRouter());

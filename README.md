@@ -51,6 +51,7 @@ Também decidimos disponiblizar endpoints para validar as seguintes informaçõe
    <li> Bilhete de identidade</li>
    <li> Passaporte </li>
    <li> Número de telefone</li>
+   <li> Número de identificação fiscal (NIF)</li>
  </ul>
 Importante realçar que também conseguimos disponiblizar conteúdos como :
  <ul>
@@ -289,6 +290,38 @@ Verifica se o número informado é de Angola e a qual operadora pertence.
   "message": "Invalid phone number"
 }
 ```
+
+#### Número de Identificação Fiscal (Nif)
+
+Verifica se o NIF informado é de válido e a retorna os dados.
+
+**GET** `https://angolaapi.onrender.com/api/v1/validate/nif/`**[nif]**
+
+##### Consulta com sucesso
+
+```json
+// GET https://angolaapi.onrender.com/api/v1/validate/nif/003519344HA042
+// Status: 200
+{
+  "nif": "003519344HA042",
+  "nome": "João Silva",
+  "tipo": "SINGULAR",
+  "estado": "Activo",
+  "regimeIva": "Sem actividade em IVA (Não factura IVA)",
+  "residenciaFiscal": "Residente Fiscal"
+}
+```
+
+##### Consulta com erro
+
+```json
+// GET https://angolaapi.onrender.com/api/v1/validate/nif/003519344HA047
+// Status: 404
+{
+   "Message": "Nif não encontrado"
+}
+```
+
 
 ## :open_hands: Como contribuir
 

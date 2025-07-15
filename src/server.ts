@@ -30,7 +30,7 @@ async function start() {
 
     setUpRoutes(app);
 
-    await mongoose
+ await mongoose
       .connect(uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
